@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1710116092" />
+    <testcase name="mux_basic_test" classname="Datapath_cocotb_test" file="C:\Users\alper\Desktop\EE\EE5-2\EE446\COCOTB\DATAPATH\Datapath_cocotb_test.py" lineno="11" time="0.012324333190917969" sim_time_ns="5500001000" ratio_time="446271689899.86847" />
+  </testsuite>
+</testsuites>

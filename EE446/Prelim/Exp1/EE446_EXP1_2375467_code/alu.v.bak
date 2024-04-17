@@ -1,0 +1,12 @@
+module alu #(parameter W = 4) (
+	 input CLK,
+    input CIN,//Carry in
+	 input [3:0] ALU_CTRL,
+	 input [W-1:0] IN_1,
+    input [W-1:0] IN_2,
+    output reg CO,
+    output reg OVF,
+    output reg Z,
+    output reg N,
+	 output [W-1:0] OUT
+);

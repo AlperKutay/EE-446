@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1710116859" />
+    <testcase name="mux_basic_test" classname="alu_cocotb_test" file="C:\Users\alper\Desktop\EE\EE5-2\EE446\COCOTB\ALU\alu_cocotb_test.py" lineno="11" time="0.005075931549072266" sim_time_ns="66000" ratio_time="13002539.408172851" />
+  </testsuite>
+</testsuites>

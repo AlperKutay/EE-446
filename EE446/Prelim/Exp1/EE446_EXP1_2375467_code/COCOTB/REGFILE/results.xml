@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1710102623" />
+    <testcase name="mux_basic_test" classname="reg_file_test" file="C:\Users\alper\Desktop\EE\EE5-2\EE446\COCOTB\REGFILE\reg_file_test.py" lineno="11" time="0.05192875862121582" sim_time_ns="326000" ratio_time="6277831.564931935" />
+  </testsuite>
+</testsuites>
