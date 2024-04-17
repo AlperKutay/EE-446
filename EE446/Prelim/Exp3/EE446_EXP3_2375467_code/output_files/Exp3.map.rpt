@@ -1,0 +1,1251 @@
+Analysis & Synthesis report for Exp3
+Thu Apr 11 03:56:57 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Inverted Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |Multi_Cycle_Computer
+ 12. Parameter Settings for User Entity Instance: DATAPATH:my_datapath
+ 13. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp
+ 14. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg
+ 15. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[1].Reg
+ 16. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[2].Reg
+ 17. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[3].Reg
+ 18. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[4].Reg
+ 19. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[5].Reg
+ 20. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[6].Reg
+ 21. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[7].Reg
+ 22. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[8].Reg
+ 23. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[9].Reg
+ 24. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[10].Reg
+ 25. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[11].Reg
+ 26. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[12].Reg
+ 27. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[13].Reg
+ 28. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[14].Reg
+ 29. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_0
+ 30. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_1
+ 31. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_2
+ 32. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_simple:reg_A
+ 33. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_simple:reg_B
+ 34. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:REG_FILE_DEST_SELECT_MUX
+ 35. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:REG_FILE_DATA_MUX
+ 36. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|shifter:SHIFT
+ 37. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_CONTROL
+ 38. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_DATA
+ 39. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_SHAMT
+ 40. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:SRC_A_MUX
+ 41. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX
+ 42. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|ALU:ALU
+ 43. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_simple:reg_alu_result
+ 44. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_4to1:ALUOut_MUX
+ 45. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_rsten:PC_REG
+ 46. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:PC_MUX
+ 47. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Memory:Instr_data_memory
+ 48. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_rsten:Instr_REG
+ 49. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:RA1_MUX
+ 50. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:RA2_MUX
+ 51. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_simple:reg_Data
+ 52. Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_en:reg_z
+ 53. Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:RA1_MUX"
+ 54. Port Connectivity Checks: "DATAPATH:my_datapath|Mux_4to1:ALUOut_MUX"
+ 55. Port Connectivity Checks: "DATAPATH:my_datapath|ALU:ALU"
+ 56. Port Connectivity Checks: "DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX"
+ 57. Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_SHAMT"
+ 58. Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_DATA"
+ 59. Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_CONTROL"
+ 60. Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:REG_FILE_DEST_SELECT_MUX"
+ 61. Port Connectivity Checks: "DATAPATH:my_datapath|Register_file:reg_file_dp|Decoder_4to16:dec"
+ 62. Port Connectivity Checks: "DATAPATH:my_datapath"
+ 63. Port Connectivity Checks: "Controller:my_controller"
+ 64. Elapsed Time Per Partition
+ 65. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Apr 11 03:56:56 2024      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; Exp3                                       ;
+; Top-level Entity Name              ; Multi_Cycle_Computer                       ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 6,514                                      ;
+;     Total combinational functions  ; 6,066                                      ;
+;     Dedicated logic registers      ; 1,348                                      ;
+; Total registers                    ; 1348                                       ;
+; Total pins                         ; 74                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                          ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+; Option                                                                     ; Setting              ; Default Value      ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+; Top-level entity name                                                      ; Multi_Cycle_Computer ; Exp3               ;
+; Family name                                                                ; Cyclone IV GX        ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                  ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                   ; On                 ;
+; Enable compact report table                                                ; Off                  ; Off                ;
+; Restructure Multiplexers                                                   ; Auto                 ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                  ; Off                ;
+; Preserve fewer node names                                                  ; On                   ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                  ; Off                ;
+; Verilog Version                                                            ; Verilog_2001         ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993            ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto                 ; Auto               ;
+; Safe State Machine                                                         ; Off                  ; Off                ;
+; Extract Verilog State Machines                                             ; On                   ; On                 ;
+; Extract VHDL State Machines                                                ; On                   ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                  ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000                 ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                  ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                   ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                   ; On                 ;
+; Parallel Synthesis                                                         ; On                   ; On                 ;
+; DSP Block Balancing                                                        ; Auto                 ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                   ; On                 ;
+; Power-Up Don't Care                                                        ; On                   ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                  ; Off                ;
+; Remove Duplicate Registers                                                 ; On                   ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                  ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                  ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                  ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                  ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                  ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                   ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                  ; Off                ;
+; Optimization Technique                                                     ; Balanced             ; Balanced           ;
+; Carry Chain Length                                                         ; 70                   ; 70                 ;
+; Auto Carry Chains                                                          ; On                   ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                   ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                  ; Off                ;
+; Auto ROM Replacement                                                       ; On                   ; On                 ;
+; Auto RAM Replacement                                                       ; On                   ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                   ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto                 ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                 ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                   ; On                 ;
+; Strict RAM Replacement                                                     ; Off                  ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                   ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                  ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                   ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                  ; Off                ;
+; Auto Resource Sharing                                                      ; Off                  ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                  ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                  ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                  ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                   ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                  ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                   ; On                 ;
+; Report Parameter Settings                                                  ; On                   ; On                 ;
+; Report Source Assignments                                                  ; On                   ; On                 ;
+; Report Connectivity Checks                                                 ; On                   ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                  ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                    ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation   ; Normal compilation ;
+; HDL message level                                                          ; Level2               ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                  ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                 ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                 ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                  ; 100                ;
+; Clock MUX Protection                                                       ; On                   ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                  ; Off                ;
+; Block Design Naming                                                        ; Auto                 ; Auto               ;
+; SDC constraint protection                                                  ; Off                  ; Off                ;
+; Synthesis Effort                                                           ; Auto                 ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                   ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                  ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium               ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto                 ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                   ; On                 ;
+; Synthesis Seed                                                             ; 1                    ; 1                  ;
++----------------------------------------------------------------------------+----------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                        ;
++----------------------------------+-----------------+---------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                                     ; Library ;
++----------------------------------+-----------------+---------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+; Multi_Cycle_Computer.v           ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Multi_Cycle_Computer.v ;         ;
+; shifter.v                        ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/shifter.v              ;         ;
+; Register_simple.v                ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Register_simple.v      ;         ;
+; Register_rsten_neg.v             ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Register_rsten_neg.v   ;         ;
+; Register_rsten.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Register_rsten.v       ;         ;
+; Register_file.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Register_file.v        ;         ;
+; Register_en.v                    ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Register_en.v          ;         ;
+; Mux_16to1.v                      ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Mux_16to1.v            ;         ;
+; Mux_4to1.v                       ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Mux_4to1.v             ;         ;
+; Mux_2to1.v                       ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Mux_2to1.v             ;         ;
+; Memory.v                         ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Memory.v               ;         ;
+; Extender.v                       ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Extender.v             ;         ;
+; Decoder_4to16.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Decoder_4to16.v        ;         ;
+; Datapath.v                       ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/Datapath.v             ;         ;
+; controller.v                     ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/controller.v           ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/ALU.v                  ;         ;
+; instructions.hex                 ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/instructions.hex       ;         ;
++----------------------------------+-----------------+---------------------------------------------+--------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 74               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; clk~input        ;
+; Maximum fan-out          ; 1348             ;
+; Total fan-out            ; 27020            ;
+; Average fan-out          ; 3.57             ;
++--------------------------+------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                      ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                       ; Library Name ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+--------------+
+; |Multi_Cycle_Computer                           ; 6066 (0)          ; 1348 (0)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 74   ; 0            ; |Multi_Cycle_Computer                                                                                     ; work         ;
+;    |Controller:my_controller|                   ; 55 (55)           ; 3 (3)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|Controller:my_controller                                                            ; work         ;
+;    |DATAPATH:my_datapath|                       ; 6011 (2)          ; 1345 (0)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath                                                                ; work         ;
+;       |ALU:ALU|                                 ; 373 (373)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|ALU:ALU                                                        ; work         ;
+;       |Extender:EXTEND|                         ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Extender:EXTEND                                                ; work         ;
+;       |Memory:Instr_data_memory|                ; 3807 (3807)       ; 672 (672)    ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory                                       ; work         ;
+;       |Mux_2to1:PC_MUX|                         ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_2to1:PC_MUX                                                ; work         ;
+;       |Mux_2to1:RA1_MUX|                        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_2to1:RA1_MUX                                               ; work         ;
+;       |Mux_2to1:RA2_MUX|                        ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_2to1:RA2_MUX                                               ; work         ;
+;       |Mux_2to1:REG_FILE_DEST_SELECT_MUX|       ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_2to1:REG_FILE_DEST_SELECT_MUX                              ; work         ;
+;       |Mux_2to1:SHIFT_MUX_CONTROL|              ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_CONTROL                                     ; work         ;
+;       |Mux_2to1:SHIFT_MUX_DATA|                 ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_DATA                                        ; work         ;
+;       |Mux_2to1:SHIFT_MUX_SHAMT|                ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_SHAMT                                       ; work         ;
+;       |Mux_2to1:SRC_A_MUX|                      ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_2to1:SRC_A_MUX                                             ; work         ;
+;       |Mux_4to1:ALUOut_MUX|                     ; 67 (67)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_4to1:ALUOut_MUX                                            ; work         ;
+;       |Mux_4to1:SRC_B_MUX|                      ; 204 (204)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX                                             ; work         ;
+;       |Register_en:reg_z|                       ; 13 (13)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_en:reg_z                                              ; work         ;
+;       |Register_file:reg_file_dp|               ; 1023 (0)          ; 480 (0)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp                                      ; work         ;
+;          |Decoder_4to16:dec|                    ; 9 (9)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Decoder_4to16:dec                    ; work         ;
+;          |Mux_16to1:mux_0|                      ; 320 (320)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_0                      ; work         ;
+;          |Mux_16to1:mux_1|                      ; 320 (320)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_1                      ; work         ;
+;          |Mux_16to1:mux_2|                      ; 320 (320)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_2                      ; work         ;
+;          |Register_rsten_neg:registers[0].Reg|  ; 40 (40)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg  ; work         ;
+;          |Register_rsten_neg:registers[10].Reg| ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[10].Reg ; work         ;
+;          |Register_rsten_neg:registers[11].Reg| ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[11].Reg ; work         ;
+;          |Register_rsten_neg:registers[12].Reg| ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[12].Reg ; work         ;
+;          |Register_rsten_neg:registers[13].Reg| ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[13].Reg ; work         ;
+;          |Register_rsten_neg:registers[14].Reg| ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[14].Reg ; work         ;
+;          |Register_rsten_neg:registers[1].Reg|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[1].Reg  ; work         ;
+;          |Register_rsten_neg:registers[2].Reg|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[2].Reg  ; work         ;
+;          |Register_rsten_neg:registers[3].Reg|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[3].Reg  ; work         ;
+;          |Register_rsten_neg:registers[4].Reg|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[4].Reg  ; work         ;
+;          |Register_rsten_neg:registers[5].Reg|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[5].Reg  ; work         ;
+;          |Register_rsten_neg:registers[6].Reg|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[6].Reg  ; work         ;
+;          |Register_rsten_neg:registers[7].Reg|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[7].Reg  ; work         ;
+;          |Register_rsten_neg:registers[8].Reg|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[8].Reg  ; work         ;
+;          |Register_rsten_neg:registers[9].Reg|  ; 1 (1)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[9].Reg  ; work         ;
+;       |Register_rsten:Instr_REG|                ; 33 (33)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_rsten:Instr_REG                                       ; work         ;
+;       |Register_rsten:PC_REG|                   ; 36 (36)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_rsten:PC_REG                                          ; work         ;
+;       |Register_simple:reg_A|                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_simple:reg_A                                          ; work         ;
+;       |Register_simple:reg_B|                   ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_simple:reg_B                                          ; work         ;
+;       |Register_simple:reg_Data|                ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_simple:reg_Data                                       ; work         ;
+;       |Register_simple:reg_alu_result|          ; 0 (0)             ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_simple:reg_alu_result                                 ; work         ;
+;       |shifter:SHIFT|                           ; 371 (371)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |Multi_Cycle_Computer|DATAPATH:my_datapath|shifter:SHIFT                                                  ; work         ;
++-------------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 1348  ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 1216  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------+
+; Inverted Register Statistics                                       ;
++----------------------------------------------------------+---------+
+; Inverted Register                                        ; Fan out ;
++----------------------------------------------------------+---------+
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[42][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[51][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[36][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[48][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[33][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[46][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[9][4]  ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[0][4]  ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[1][4]  ; 4       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[25][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[76][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[77][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[68][4] ; 4       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[69][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[64][4] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[78][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[65][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[77][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[76][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[33][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[36][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[40][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[32][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[43][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[39][2] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[65][3] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[77][3] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[78][3] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[76][3] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[55][3] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[33][3] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[51][3] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[44][3] ; 4       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[15][3] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[63][3] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[38][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[39][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[42][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[43][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[41][7] ; 4       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[34][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[35][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[47][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[63][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[6][7]  ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[7][7]  ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[11][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[2][7]  ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[3][7]  ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[15][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[22][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[23][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[27][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[30][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[31][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[77][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[79][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[69][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[66][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[67][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[70][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[71][7] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[78][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[77][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[64][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[71][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[67][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[79][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[42][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[10][0] ; 4       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[6][0]  ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[38][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[30][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[26][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[21][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[25][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[29][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[20][0] ; 4       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[28][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[36][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[4][0]  ; 4       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[0][0]  ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[43][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[35][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[23][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[31][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[3][0]  ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[47][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[39][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[63][0] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[43][5] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[39][5] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[34][5] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[35][5] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[47][5] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[40][5] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[37][5] ; 4       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[33][5] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[63][5] ; 3       ;
+; DATAPATH:my_datapath|Memory:Instr_data_memory|mem[5][5]  ; 4       ;
+; Total number of inverted registers = 173*                ;         ;
++----------------------------------------------------------+---------+
+* Table truncated at 100 items. To change the number of inverted registers reported, set the "Number of Inverted Registers Reported" option under Assignments->Settings->Analysis and Synthesis Settings->More Settings
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_rsten:Instr_REG|OUT[16]                                       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg|OUT[22]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[1].Reg|OUT[6]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[2].Reg|OUT[6]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[3].Reg|OUT[15]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[4].Reg|OUT[2]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[5].Reg|OUT[7]   ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[6].Reg|OUT[26]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[7].Reg|OUT[16]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[8].Reg|OUT[14]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[9].Reg|OUT[12]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[10].Reg|OUT[4]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[11].Reg|OUT[4]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[12].Reg|OUT[15] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[13].Reg|OUT[9]  ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[14].Reg|OUT[16] ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|Controller:my_controller|Cycle_reg[1]                                                       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_rsten:PC_REG|OUT[27]                                          ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_simple:reg_A|OUT[3]                                           ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_simple:reg_B|OUT[21]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[83][0]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[82][2]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[81][5]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[80][3]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[79][1]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[78][7]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[76][7]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[75][7]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[74][1]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[73][2]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[72][0]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[71][4]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[70][1]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[69][1]                                    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[68][3]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[67][3]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[66][1]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[65][7]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[64][6]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[63][2]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[62][3]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[61][1]                                    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[60][7]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[59][0]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[58][3]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[57][2]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[56][3]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[55][5]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[54][3]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[53][0]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[52][4]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[51][5]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[50][6]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[49][1]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[48][5]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[47][2]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[46][7]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[45][0]                                    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[44][4]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[43][4]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[42][5]                                    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[41][5]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[40][0]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[39][4]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[38][4]                                    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[37][4]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[36][7]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[35][2]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[34][4]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[33][0]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[32][5]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[31][4]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[30][2]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[29][1]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[28][4]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[27][4]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[26][2]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[25][7]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[24][7]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[23][4]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[22][4]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[21][5]                                    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[20][7]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[19][7]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[18][3]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[17][6]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[16][1]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[15][2]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[14][7]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[13][6]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[12][5]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[11][3]                                    ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[10][2]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[9][6]                                     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[8][3]                                     ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[7][0]                                     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[6][6]                                     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[5][6]                                     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[4][3]                                     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[3][2]                                     ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[2][0]                                     ;
+; 5:1                ; 7 bits    ; 21 LEs        ; 14 LEs               ; 7 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[1][6]                                     ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[0][2]                                     ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[79][7]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[78][5]                                    ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[77][5]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[76][4]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[71][7]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[70][7]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[69][6]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[67][7]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[66][7]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[65][1]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[64][4]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[63][0]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[55][3]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[51][1]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[48][4]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[47][5]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[46][1]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[43][2]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[42][1]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[40][5]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[39][7]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[38][7]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[36][4]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[35][7]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[34][5]                                    ;
+; 5:1                ; 6 bits    ; 18 LEs        ; 12 LEs               ; 6 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[33][4]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[32][2]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[31][5]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[30][1]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[29][0]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[28][5]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[27][5]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[26][6]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[25][6]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[24][1]                                    ;
+; 5:1                ; 4 bits    ; 12 LEs        ; 8 LEs                ; 4 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[23][7]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[22][5]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[21][6]                                    ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[15][3]                                    ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[11][7]                                    ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[9][5]                                     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[7][5]                                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[6][0]                                     ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[3][7]                                     ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 4 LEs                ; 2 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[2][7]                                     ;
+; 5:1                ; 3 bits    ; 9 LEs         ; 6 LEs                ; 3 LEs                  ; Yes        ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|mem[0][4]                                     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_4to1:ALUOut_MUX|Mux9                                               ;
+; 8:1                ; 2 bits    ; 10 LEs        ; 6 LEs                ; 4 LEs                  ; No         ; |Multi_Cycle_Computer|Controller:my_controller|State_reg[0]                                                       ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 320 LEs              ; 0 LEs                  ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_2|Mux30                        ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Multi_Cycle_Computer|Controller:my_controller|ResultSrc[1]                                                       ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |Multi_Cycle_Computer|Controller:my_controller|Write_Z_ENABLE                                                     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|ALU:ALU|Add4                                                           ;
+; 11:1               ; 32 bits   ; 224 LEs       ; 192 LEs              ; 32 LEs                 ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|ALU:ALU|Mux17                                                          ;
+; 84:1               ; 8 bits    ; 448 LEs       ; 448 LEs              ; 0 LEs                  ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|Mux27                                         ;
+; 84:1               ; 8 bits    ; 448 LEs       ; 448 LEs              ; 0 LEs                  ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|Mux13                                         ;
+; 9:1                ; 3 bits    ; 18 LEs        ; 15 LEs               ; 3 LEs                  ; No         ; |Multi_Cycle_Computer|Controller:my_controller|ALUControl[1]                                                      ;
+; 12:1               ; 4 bits    ; 32 LEs        ; 20 LEs               ; 12 LEs                 ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX|Mux17                                               ;
+; 14:1               ; 4 bits    ; 36 LEs        ; 24 LEs               ; 12 LEs                 ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX|Mux22                                               ;
+; 14:1               ; 6 bits    ; 54 LEs        ; 36 LEs               ; 18 LEs                 ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX|Mux28                                               ;
+; 13:1               ; 7 bits    ; 56 LEs        ; 49 LEs               ; 7 LEs                  ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX|Mux10                                               ;
+; 13:1               ; 3 bits    ; 24 LEs        ; 24 LEs               ; 0 LEs                  ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX|Mux6                                                ;
+; 14:1               ; 2 bits    ; 18 LEs        ; 16 LEs               ; 2 LEs                  ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX|Mux2                                                ;
+; 42:1               ; 8 bits    ; 224 LEs       ; 224 LEs              ; 0 LEs                  ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|Mux1                                          ;
+; 42:1               ; 8 bits    ; 224 LEs       ; 224 LEs              ; 0 LEs                  ; No         ; |Multi_Cycle_Computer|DATAPATH:my_datapath|Memory:Instr_data_memory|Mux18                                         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Multi_Cycle_Computer ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp ;
++----------------+-------+--------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                               ;
++----------------+-------+--------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                     ;
++----------------+-------+--------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[1].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[2].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[3].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[4].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[5].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[6].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[7].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[8].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[9].Reg ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                   ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                         ;
++----------------+-------+--------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[10].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[11].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[12].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[13].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[14].Reg ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                                                    ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                                          ;
++----------------+-------+---------------------------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_0 ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_1 ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_2 ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_simple:reg_A ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_simple:reg_B ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:REG_FILE_DEST_SELECT_MUX ;
++----------------+-------+----------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                       ;
++----------------+-------+----------------------------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                                             ;
++----------------+-------+----------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:REG_FILE_DATA_MUX ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|shifter:SHIFT ;
++----------------+-------+--------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                   ;
++----------------+-------+--------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                         ;
++----------------+-------+--------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_CONTROL ;
++----------------+-------+---------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                ;
++----------------+-------+---------------------------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                                      ;
++----------------+-------+---------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_DATA ;
++----------------+-------+------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                             ;
++----------------+-------+------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                   ;
++----------------+-------+------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_SHAMT ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; WIDTH          ; 5     ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:SRC_A_MUX ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|ALU:ALU ;
++----------------+-------+--------------------------------------------------+
+; Parameter Name ; Value ; Type                                             ;
++----------------+-------+--------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                   ;
++----------------+-------+--------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_simple:reg_alu_result ;
++----------------+-------+-------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                    ;
++----------------+-------+-------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                          ;
++----------------+-------+-------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_4to1:ALUOut_MUX ;
++----------------+-------+--------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                         ;
++----------------+-------+--------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                               ;
++----------------+-------+--------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_rsten:PC_REG ;
++----------------+-------+----------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                           ;
++----------------+-------+----------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                 ;
++----------------+-------+----------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:PC_MUX ;
++----------------+-------+----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                     ;
++----------------+-------+----------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                           ;
++----------------+-------+----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Memory:Instr_data_memory ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; BYTE_SIZE      ; 4     ; Signed Integer                                                    ;
+; ADDR_WIDTH     ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_rsten:Instr_REG ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:RA1_MUX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Mux_2to1:RA2_MUX ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_simple:reg_Data ;
++----------------+-------+-------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                              ;
++----------------+-------+-------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                    ;
++----------------+-------+-------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: DATAPATH:my_datapath|Register_en:reg_z ;
++----------------+-------+------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                       ;
++----------------+-------+------------------------------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                                             ;
++----------------+-------+------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:RA1_MUX" ;
++---------+-------+----------+--------------------------------------+
+; Port    ; Type  ; Severity ; Details                              ;
++---------+-------+----------+--------------------------------------+
+; input_1 ; Input ; Info     ; Stuck at VCC                         ;
++---------+-------+----------+--------------------------------------+
+
+
++----------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath|Mux_4to1:ALUOut_MUX" ;
++---------+-------+----------+-----------------------------------------+
+; Port    ; Type  ; Severity ; Details                                 ;
++---------+-------+----------+-----------------------------------------+
+; input_3 ; Input ; Info     ; Stuck at GND                            ;
++---------+-------+----------+-----------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath|ALU:ALU"                                                                                                                ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; CI   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; CO   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; OVF  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; N    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX" ;
++----------------+-------+----------+---------------------------------+
+; Port           ; Type  ; Severity ; Details                         ;
++----------------+-------+----------+---------------------------------+
+; input_2[31..3] ; Input ; Info     ; Stuck at GND                    ;
+; input_2[1..0]  ; Input ; Info     ; Stuck at GND                    ;
+; input_2[2]     ; Input ; Info     ; Stuck at VCC                    ;
++----------------+-------+----------+---------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_SHAMT" ;
++------------+-------+----------+-------------------------------------------+
+; Port       ; Type  ; Severity ; Details                                   ;
++------------+-------+----------+-------------------------------------------+
+; input_1[0] ; Input ; Info     ; Stuck at GND                              ;
++------------+-------+----------+-------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_DATA" ;
++----------------+-------+----------+--------------------------------------+
+; Port           ; Type  ; Severity ; Details                              ;
++----------------+-------+----------+--------------------------------------+
+; input_1[31..8] ; Input ; Info     ; Stuck at GND                         ;
++----------------+-------+----------+--------------------------------------+
+
+
++-----------------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_CONTROL" ;
++---------+-------+----------+------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                        ;
++---------+-------+----------+------------------------------------------------+
+; input_1 ; Input ; Info     ; Stuck at VCC                                   ;
++---------+-------+----------+------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath|Mux_2to1:REG_FILE_DEST_SELECT_MUX" ;
++---------------+-------+----------+-------------------------------------------------+
+; Port          ; Type  ; Severity ; Details                                         ;
++---------------+-------+----------+-------------------------------------------------+
+; input_1[3..1] ; Input ; Info     ; Stuck at VCC                                    ;
+; input_1[0]    ; Input ; Info     ; Stuck at GND                                    ;
++---------------+-------+----------+-------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath|Register_file:reg_file_dp|Decoder_4to16:dec"                      ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; OUT[15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "DATAPATH:my_datapath"                                                                      ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port        ; Type   ; Severity ; Details                                                                             ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+; RA1         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; RA2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; SRC_A       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; SRC_B       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Rd1         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Rd2         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ALU_RESULT  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Instruction ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Result      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Instr_read  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Instr_write ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Controller:my_controller"                                                                ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port      ; Type   ; Severity ; Details                                                                             ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+; Cond_EX   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; Cycle_reg ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++-----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:32     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Thu Apr 11 03:56:22 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Exp3 -c Exp3
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 1 design units, including 1 entities, in source file multi_cycle_computer.v
+    Info (12023): Found entity 1: Multi_Cycle_Computer
+Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
+    Info (12023): Found entity 1: shifter
+Info (12021): Found 1 design units, including 1 entities, in source file register_simple.v
+    Info (12023): Found entity 1: Register_simple
+Info (12021): Found 1 design units, including 1 entities, in source file register_rsten_neg.v
+    Info (12023): Found entity 1: Register_rsten_neg
+Info (12021): Found 1 design units, including 1 entities, in source file register_rsten.v
+    Info (12023): Found entity 1: Register_rsten
+Info (12021): Found 1 design units, including 1 entities, in source file register_reset.v
+    Info (12023): Found entity 1: Register_reset
+Info (12021): Found 1 design units, including 1 entities, in source file register_file.v
+    Info (12023): Found entity 1: Register_file
+Info (12021): Found 1 design units, including 1 entities, in source file register_en.v
+    Info (12023): Found entity 1: Register_en
+Info (12021): Found 1 design units, including 1 entities, in source file mux_16to1.v
+    Info (12023): Found entity 1: Mux_16to1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4to1.v
+    Info (12023): Found entity 1: Mux_4to1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2to1.v
+    Info (12023): Found entity 1: Mux_2to1
+Info (12021): Found 1 design units, including 1 entities, in source file memory.v
+    Info (12023): Found entity 1: Memory
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_memory.v
+    Info (12023): Found entity 1: Inst_Memory
+Info (12021): Found 1 design units, including 1 entities, in source file id_memory.v
+    Info (12023): Found entity 1: ID_memory
+Info (12021): Found 1 design units, including 1 entities, in source file hexto7seg.v
+    Info (12023): Found entity 1: hexto7seg
+Info (12021): Found 1 design units, including 1 entities, in source file extender.v
+    Info (12023): Found entity 1: Extender
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_4to16.v
+    Info (12023): Found entity 1: Decoder_4to16
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_2to4.v
+    Info (12023): Found entity 1: Decoder_2to4
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: DATAPATH
+Info (12021): Found 1 design units, including 1 entities, in source file controller.v
+    Info (12023): Found entity 1: Controller
+Info (12021): Found 1 design units, including 1 entities, in source file control_unit.v
+    Info (12023): Found entity 1: Control_unit
+Info (12021): Found 1 design units, including 1 entities, in source file conditional_unit.v
+    Info (12023): Found entity 1: Conditional_unit
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: Adder
+Warning (10236): Verilog HDL Implicit Net warning at Multi_Cycle_Computer.v(44): created implicit net for "IRWrite"
+Info (12127): Elaborating entity "Multi_Cycle_Computer" for the top level hierarchy
+Info (12128): Elaborating entity "Controller" for hierarchy "Controller:my_controller"
+Warning (10230): Verilog HDL assignment warning at controller.v(31): truncated value with size 32 to match size of target (3)
+Warning (10230): Verilog HDL assignment warning at controller.v(115): truncated value with size 32 to match size of target (1)
+Warning (10230): Verilog HDL assignment warning at controller.v(171): truncated value with size 32 to match size of target (1)
+Info (12128): Elaborating entity "DATAPATH" for hierarchy "DATAPATH:my_datapath"
+Info (12128): Elaborating entity "Register_file" for hierarchy "DATAPATH:my_datapath|Register_file:reg_file_dp"
+Info (12128): Elaborating entity "Register_rsten_neg" for hierarchy "DATAPATH:my_datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg"
+Info (12128): Elaborating entity "Decoder_4to16" for hierarchy "DATAPATH:my_datapath|Register_file:reg_file_dp|Decoder_4to16:dec"
+Info (12128): Elaborating entity "Mux_16to1" for hierarchy "DATAPATH:my_datapath|Register_file:reg_file_dp|Mux_16to1:mux_0"
+Info (12128): Elaborating entity "Register_simple" for hierarchy "DATAPATH:my_datapath|Register_simple:reg_A"
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "DATAPATH:my_datapath|Mux_2to1:REG_FILE_DEST_SELECT_MUX"
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "DATAPATH:my_datapath|Mux_2to1:REG_FILE_DATA_MUX"
+Info (12128): Elaborating entity "shifter" for hierarchy "DATAPATH:my_datapath|shifter:SHIFT"
+Warning (10230): Verilog HDL assignment warning at shifter.v(20): truncated value with size 64 to match size of target (32)
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_CONTROL"
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "DATAPATH:my_datapath|Mux_2to1:SHIFT_MUX_SHAMT"
+Info (12128): Elaborating entity "Mux_4to1" for hierarchy "DATAPATH:my_datapath|Mux_4to1:SRC_B_MUX"
+Info (12128): Elaborating entity "ALU" for hierarchy "DATAPATH:my_datapath|ALU:ALU"
+Info (12128): Elaborating entity "Register_rsten" for hierarchy "DATAPATH:my_datapath|Register_rsten:PC_REG"
+Info (12128): Elaborating entity "Memory" for hierarchy "DATAPATH:my_datapath|Memory:Instr_data_memory"
+Info (12128): Elaborating entity "Extender" for hierarchy "DATAPATH:my_datapath|Extender:EXTEND"
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "DATAPATH:my_datapath|Mux_2to1:RA1_MUX"
+Info (12128): Elaborating entity "Register_en" for hierarchy "DATAPATH:my_datapath|Register_en:reg_z"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 6652 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 6 input pins
+    Info (21059): Implemented 68 output pins
+    Info (21061): Implemented 6578 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 7 warnings
+    Info: Peak virtual memory: 4718 megabytes
+    Info: Processing ended: Thu Apr 11 03:56:57 2024
+    Info: Elapsed time: 00:00:35
+    Info: Total CPU time (on all processors): 00:00:34
+
+

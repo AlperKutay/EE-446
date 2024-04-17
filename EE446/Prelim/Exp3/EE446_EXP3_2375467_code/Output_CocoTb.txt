@@ -1,0 +1,559 @@
+  5000.00ns DEBUG    Performance Model                  **************** Instruction No: 0 **********************
+  5000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+  5000.00ns DEBUG    Performance Model                  Binary string:11100011101000000001000000010011
+  5000.00ns DEBUG    Performance Model                  Operation type Data Processing
+  5000.00ns DEBUG    Performance Model                  cond:E
+  5000.00ns DEBUG    Performance Model                  Immediate bit:1
+  5000.00ns DEBUG    Performance Model                  cmd:D
+  5000.00ns DEBUG    Performance Model                  Set bit:0
+  5000.00ns DEBUG    Performance Model                  Rn:0     Rd:1
+  5000.00ns DEBUG    Performance Model                  rot:0    imm8:19
+ 15000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 0 **********************
+ 25000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 1 **********************
+ 35000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 2 **********************
+ 40000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+ 40000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+ 45000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 3 **********************
+ 50000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 50000.00ns DEBUG    Performance Model                  PC:0x4   PC:0x4
+ 50000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+ 50000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+ 50000.00ns DEBUG    Performance Model                  Register2: 0x0           0x0
+ 50000.00ns DEBUG    Performance Model                  Register3: 0x0           0x0
+ 50000.00ns DEBUG    Performance Model                  Register4: 0x0           0x0
+ 50000.00ns DEBUG    Performance Model                  Register5: 0x0           0x0
+ 50000.00ns DEBUG    Performance Model                  Register6: 0x0           0x0
+ 50000.00ns DEBUG    Performance Model                  Register7: 0x0           0x0
+ 50000.00ns DEBUG    Performance Model                  Register8: 0x0           0x0
+ 50000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+ 50000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+ 50000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+ 50000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+ 50000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+ 50000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+ 50000.00ns DEBUG    Performance Model                  Register15: 0x8          0x8
+ 50000.00ns DEBUG    Performance Model                  **************** Instruction No: 1 **********************
+ 50000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 50000.00ns DEBUG    Performance Model                  Binary string:11100000100000010010000000000001
+ 50000.00ns DEBUG    Performance Model                  Operation type Data Processing
+ 50000.00ns DEBUG    Performance Model                  cond:E
+ 50000.00ns DEBUG    Performance Model                  Immediate bit:0
+ 50000.00ns DEBUG    Performance Model                  cmd:4
+ 50000.00ns DEBUG    Performance Model                  Set bit:0
+ 50000.00ns DEBUG    Performance Model                  Rn:1     Rd:2
+ 50000.00ns DEBUG    Performance Model                  shamt5:0         sh:0    Rm:1
+ 55000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 4 **********************
+ 65000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 5 **********************
+ 75000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 6 **********************
+ 80000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+ 80000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+ 85000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 7 **********************
+ 90000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 90000.00ns DEBUG    Performance Model                  PC:0x8   PC:0x8
+ 90000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+ 90000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+ 90000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+ 90000.00ns DEBUG    Performance Model                  Register3: 0x0           0x0
+ 90000.00ns DEBUG    Performance Model                  Register4: 0x0           0x0
+ 90000.00ns DEBUG    Performance Model                  Register5: 0x0           0x0
+ 90000.00ns DEBUG    Performance Model                  Register6: 0x0           0x0
+ 90000.00ns DEBUG    Performance Model                  Register7: 0x0           0x0
+ 90000.00ns DEBUG    Performance Model                  Register8: 0x0           0x0
+ 90000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+ 90000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+ 90000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+ 90000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+ 90000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+ 90000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+ 90000.00ns DEBUG    Performance Model                  Register15: 0xc          0xc
+ 90000.00ns DEBUG    Performance Model                  **************** Instruction No: 2 **********************
+ 90000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 90000.00ns DEBUG    Performance Model                  Binary string:11100000000000010011000000000010
+ 90000.00ns DEBUG    Performance Model                  Operation type Data Processing
+ 90000.00ns DEBUG    Performance Model                  cond:E
+ 90000.00ns DEBUG    Performance Model                  Immediate bit:0
+ 90000.00ns DEBUG    Performance Model                  cmd:0
+ 90000.00ns DEBUG    Performance Model                  Set bit:0
+ 90000.00ns DEBUG    Performance Model                  Rn:1     Rd:3
+ 90000.00ns DEBUG    Performance Model                  shamt5:0         sh:0    Rm:2
+ 95000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 8 **********************
+105000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 9 **********************
+115000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 10 **********************
+120000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+120000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+125000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 11 **********************
+130000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+130000.00ns DEBUG    Performance Model                  PC:0xc   PC:0xc
+130000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+130000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+130000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+130000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+130000.00ns DEBUG    Performance Model                  Register4: 0x0           0x0
+130000.00ns DEBUG    Performance Model                  Register5: 0x0           0x0
+130000.00ns DEBUG    Performance Model                  Register6: 0x0           0x0
+130000.00ns DEBUG    Performance Model                  Register7: 0x0           0x0
+130000.00ns DEBUG    Performance Model                  Register8: 0x0           0x0
+130000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+130000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+130000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+130000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+130000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+130000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+130000.00ns DEBUG    Performance Model                  Register15: 0x10         0x10
+130000.00ns DEBUG    Performance Model                  **************** Instruction No: 3 **********************
+130000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+130000.00ns DEBUG    Performance Model                  Binary string:11101010000000000000000000000000
+130000.00ns DEBUG    Performance Model                  Operation type Branch (except Bx)
+130000.00ns DEBUG    Performance Model                  Link bit:0
+130000.00ns DEBUG    Performance Model                  imm24:0
+135000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 12 **********************
+145000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 13 **********************
+150000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+150000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+155000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 14 **********************
+160000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+160000.00ns DEBUG    Performance Model                  PC:0x14          PC:0x14
+160000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+160000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+160000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+160000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+160000.00ns DEBUG    Performance Model                  Register4: 0x0           0x0
+160000.00ns DEBUG    Performance Model                  Register5: 0x0           0x0
+160000.00ns DEBUG    Performance Model                  Register6: 0x0           0x0
+160000.00ns DEBUG    Performance Model                  Register7: 0x0           0x0
+160000.00ns DEBUG    Performance Model                  Register8: 0x0           0x0
+160000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+160000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+160000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+160000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+160000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+160000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+160000.00ns DEBUG    Performance Model                  Register15: 0x18         0x18
+160000.00ns DEBUG    Performance Model                  **************** Instruction No: 5 **********************
+160000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+160000.00ns DEBUG    Performance Model                  Binary string:11100001101000000100000100000001
+160000.00ns DEBUG    Performance Model                  Operation type Data Processing
+160000.00ns DEBUG    Performance Model                  cond:E
+160000.00ns DEBUG    Performance Model                  Immediate bit:0
+160000.00ns DEBUG    Performance Model                  cmd:D
+160000.00ns DEBUG    Performance Model                  Set bit:0
+160000.00ns DEBUG    Performance Model                  Rn:0     Rd:4
+160000.00ns DEBUG    Performance Model                  shamt5:2         sh:0    Rm:1
+165000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 15 **********************
+175000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 16 **********************
+185000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 17 **********************
+190000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+190000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+195000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 18 **********************
+200000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+200000.00ns DEBUG    Performance Model                  PC:0x18          PC:0x18
+200000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+200000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+200000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+200000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+200000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+200000.00ns DEBUG    Performance Model                  Register5: 0x0           0x0
+200000.00ns DEBUG    Performance Model                  Register6: 0x0           0x0
+200000.00ns DEBUG    Performance Model                  Register7: 0x0           0x0
+200000.00ns DEBUG    Performance Model                  Register8: 0x0           0x0
+200000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+200000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+200000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+200000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+200000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+200000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+200000.00ns DEBUG    Performance Model                  Register15: 0x1c         0x1c
+200000.00ns DEBUG    Performance Model                  **************** Instruction No: 6 **********************
+200000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+200000.00ns DEBUG    Performance Model                  Binary string:11100000010000010101000100100010
+200000.00ns DEBUG    Performance Model                  Operation type Data Processing
+200000.00ns DEBUG    Performance Model                  cond:E
+200000.00ns DEBUG    Performance Model                  Immediate bit:0
+200000.00ns DEBUG    Performance Model                  cmd:2
+200000.00ns DEBUG    Performance Model                  Set bit:0
+200000.00ns DEBUG    Performance Model                  Rn:1     Rd:5
+200000.00ns DEBUG    Performance Model                  shamt5:2         sh:1    Rm:2
+205000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 19 **********************
+215000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 20 **********************
+225000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 21 **********************
+230000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+230000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+235000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 22 **********************
+240000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+240000.00ns DEBUG    Performance Model                  PC:0x1c          PC:0x1c
+240000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+240000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+240000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+240000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+240000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+240000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+240000.00ns DEBUG    Performance Model                  Register6: 0x0           0x0
+240000.00ns DEBUG    Performance Model                  Register7: 0x0           0x0
+240000.00ns DEBUG    Performance Model                  Register8: 0x0           0x0
+240000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+240000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+240000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+240000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+240000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+240000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+240000.00ns DEBUG    Performance Model                  Register15: 0x20         0x20
+240000.00ns DEBUG    Performance Model                  **************** Instruction No: 7 **********************
+240000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+240000.00ns DEBUG    Performance Model                  Binary string:11100001100000110110000101100011
+240000.00ns DEBUG    Performance Model                  Operation type Data Processing
+240000.00ns DEBUG    Performance Model                  cond:E
+240000.00ns DEBUG    Performance Model                  Immediate bit:0
+240000.00ns DEBUG    Performance Model                  cmd:C
+240000.00ns DEBUG    Performance Model                  Set bit:0
+240000.00ns DEBUG    Performance Model                  Rn:3     Rd:6
+240000.00ns DEBUG    Performance Model                  shamt5:2         sh:3    Rm:3
+245000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 23 **********************
+255000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 24 **********************
+265000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 25 **********************
+270000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+270000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+275000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 26 **********************
+280000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+280000.00ns DEBUG    Performance Model                  PC:0x20          PC:0x20
+280000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+280000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+280000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+280000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+280000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+280000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+280000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+280000.00ns DEBUG    Performance Model                  Register7: 0x0           0x0
+280000.00ns DEBUG    Performance Model                  Register8: 0x0           0x0
+280000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+280000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+280000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+280000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+280000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+280000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+280000.00ns DEBUG    Performance Model                  Register15: 0x24         0x24
+280000.00ns DEBUG    Performance Model                  **************** Instruction No: 8 **********************
+280000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+280000.00ns DEBUG    Performance Model                  Binary string:11100001101000000111111001000110
+280000.00ns DEBUG    Performance Model                  Operation type Data Processing
+280000.00ns DEBUG    Performance Model                  cond:E
+280000.00ns DEBUG    Performance Model                  Immediate bit:0
+280000.00ns DEBUG    Performance Model                  cmd:D
+280000.00ns DEBUG    Performance Model                  Set bit:0
+280000.00ns DEBUG    Performance Model                  Rn:0     Rd:7
+280000.00ns DEBUG    Performance Model                  shamt5:28        sh:2    Rm:6
+285000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 27 **********************
+295000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 28 **********************
+305000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 29 **********************
+310000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+310000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+315000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 30 **********************
+320000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+320000.00ns DEBUG    Performance Model                  PC:0x24          PC:0x24
+320000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+320000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+320000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+320000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+320000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+320000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+320000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+320000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+320000.00ns DEBUG    Performance Model                  Register8: 0x0           0x0
+320000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+320000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+320000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+320000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+320000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+320000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+320000.00ns DEBUG    Performance Model                  Register15: 0x28         0x28
+320000.00ns DEBUG    Performance Model                  **************** Instruction No: 9 **********************
+320000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+320000.00ns DEBUG    Performance Model                  Binary string:11100101100000010010000001010101
+320000.00ns DEBUG    Performance Model                  Operation type Memory
+320000.00ns DEBUG    Performance Model                  Load bit:0
+320000.00ns DEBUG    Performance Model                  Rn:1     Rn:2
+320000.00ns DEBUG    Performance Model                  imm12:85
+325000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 31 **********************
+335000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 32 **********************
+345000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 33 **********************
+350000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+350000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+355000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 34 **********************
+360000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+360000.00ns DEBUG    Performance Model                  PC:0x28          PC:0x28
+360000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+360000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+360000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+360000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+360000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+360000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+360000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+360000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+360000.00ns DEBUG    Performance Model                  Register8: 0x0           0x0
+360000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+360000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+360000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+360000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+360000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+360000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+360000.00ns DEBUG    Performance Model                  Register15: 0x2c         0x2c
+360000.00ns DEBUG    Performance Model                  **************** Instruction No: 10 **********************
+360000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+360000.00ns DEBUG    Performance Model                  Binary string:11100101100100111000000001100110
+360000.00ns DEBUG    Performance Model                  Operation type Memory
+360000.00ns DEBUG    Performance Model                  Load bit:1
+360000.00ns DEBUG    Performance Model                  Rn:3     Rn:8
+360000.00ns DEBUG    Performance Model                  imm12:102
+365000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 35 **********************
+375000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 36 **********************
+385000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 37 **********************
+395000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 38 **********************
+400000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+400000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+405000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 39 **********************
+410000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+410000.00ns DEBUG    Performance Model                  PC:0x2c          PC:0x2c
+410000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+410000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+410000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+410000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+410000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+410000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+410000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+410000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+410000.00ns DEBUG    Performance Model                  Register8: 0x26          0x26
+410000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+410000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+410000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+410000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+410000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+410000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+410000.00ns DEBUG    Performance Model                  Register15: 0x30         0x30
+410000.00ns DEBUG    Performance Model                  **************** Instruction No: 11 **********************
+410000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+410000.00ns DEBUG    Performance Model                  Binary string:11100001010100100000000000001000
+410000.00ns DEBUG    Performance Model                  Operation type Data Processing
+410000.00ns DEBUG    Performance Model                  cond:E
+410000.00ns DEBUG    Performance Model                  Immediate bit:0
+410000.00ns DEBUG    Performance Model                  cmd:A
+410000.00ns DEBUG    Performance Model                  Set bit:1
+410000.00ns DEBUG    Performance Model                  Rn:2     Rd:0
+410000.00ns DEBUG    Performance Model                  shamt5:0         sh:0    Rm:8
+415000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 40 **********************
+425000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 41 **********************
+435000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 42 **********************
+440000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+440000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+445000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 43 **********************
+450000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+450000.00ns DEBUG    Performance Model                  PC:0x30          PC:0x30
+450000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+450000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+450000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+450000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+450000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+450000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+450000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+450000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+450000.00ns DEBUG    Performance Model                  Register8: 0x26          0x26
+450000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+450000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+450000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+450000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+450000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+450000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+450000.00ns DEBUG    Performance Model                  Register15: 0x34         0x34
+450000.00ns DEBUG    Performance Model                  **************** Instruction No: 12 **********************
+450000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+450000.00ns DEBUG    Performance Model                  Binary string:00011010000000000000000000010010
+450000.00ns DEBUG    Performance Model                  Operation type Branch (except Bx)
+450000.00ns DEBUG    Performance Model                  Link bit:0
+450000.00ns DEBUG    Performance Model                  imm24:18
+450000.00ns DEBUG    Performance Model                  Current Instruction is not executed
+455000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 44 **********************
+465000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 45 **********************
+470000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+470000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+475000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 46 **********************
+480000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+480000.00ns DEBUG    Performance Model                  PC:0x34          PC:0x34
+480000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+480000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+480000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+480000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+480000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+480000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+480000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+480000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+480000.00ns DEBUG    Performance Model                  Register8: 0x26          0x26
+480000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+480000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+480000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+480000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+480000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+480000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+480000.00ns DEBUG    Performance Model                  Register15: 0x38         0x38
+480000.00ns DEBUG    Performance Model                  **************** Instruction No: 13 **********************
+480000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+480000.00ns DEBUG    Performance Model                  Binary string:00001010000000000000000000000000
+480000.00ns DEBUG    Performance Model                  Operation type Branch (except Bx)
+480000.00ns DEBUG    Performance Model                  Link bit:0
+480000.00ns DEBUG    Performance Model                  imm24:0
+485000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 47 **********************
+495000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 48 **********************
+500000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+500000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+505000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 49 **********************
+510000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+510000.00ns DEBUG    Performance Model                  PC:0x3c          PC:0x3c
+510000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+510000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+510000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+510000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+510000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+510000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+510000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+510000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+510000.00ns DEBUG    Performance Model                  Register8: 0x26          0x26
+510000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+510000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+510000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+510000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+510000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+510000.00ns DEBUG    Performance Model                  Register14: 0x0          0x0
+510000.00ns DEBUG    Performance Model                  Register15: 0x40         0x40
+510000.00ns DEBUG    Performance Model                  **************** Instruction No: 15 **********************
+510000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+510000.00ns DEBUG    Performance Model                  Binary string:11101011000000000000000000000010
+510000.00ns DEBUG    Performance Model                  Operation type Branch (except Bx)
+510000.00ns DEBUG    Performance Model                  Link bit:1
+510000.00ns DEBUG    Performance Model                  imm24:2
+515000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 50 **********************
+525000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 51 **********************
+530000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+530000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+535000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 52 **********************
+540000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+540000.00ns DEBUG    Performance Model                  PC:0x4c          PC:0x4c
+540000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+540000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+540000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+540000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+540000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+540000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+540000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+540000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+540000.00ns DEBUG    Performance Model                  Register8: 0x26          0x26
+540000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+540000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+540000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+540000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+540000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+540000.00ns DEBUG    Performance Model                  Register14: 0x40         0x40
+540000.00ns DEBUG    Performance Model                  Register15: 0x50         0x50
+540000.00ns DEBUG    Performance Model                  **************** Instruction No: 19 **********************
+540000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+540000.00ns DEBUG    Performance Model                  Binary string:11100001001011111111111100011110
+540000.00ns DEBUG    Performance Model                  Operation type BX
+540000.00ns DEBUG    Performance Model                  Rm: 14
+545000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 53 **********************
+555000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 54 **********************
+560000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+560000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+565000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 55 **********************
+570000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+570000.00ns DEBUG    Performance Model                  PC:0x40          PC:0x40
+570000.00ns DEBUG    Performance Model                  Register0: 0x0           0x0
+570000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+570000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+570000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+570000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+570000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+570000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+570000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+570000.00ns DEBUG    Performance Model                  Register8: 0x26          0x26
+570000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+570000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+570000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+570000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+570000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+570000.00ns DEBUG    Performance Model                  Register14: 0x40         0x40
+570000.00ns DEBUG    Performance Model                  Register15: 0x44         0x44
+570000.00ns DEBUG    Performance Model                  **************** Instruction No: 16 **********************
+570000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+570000.00ns DEBUG    Performance Model                  Binary string:11100011101000000000111000110011
+570000.00ns DEBUG    Performance Model                  Operation type Data Processing
+570000.00ns DEBUG    Performance Model                  cond:E
+570000.00ns DEBUG    Performance Model                  Immediate bit:1
+570000.00ns DEBUG    Performance Model                  cmd:D
+570000.00ns DEBUG    Performance Model                  Set bit:0
+570000.00ns DEBUG    Performance Model                  Rn:0     Rd:0
+570000.00ns DEBUG    Performance Model                  rot:14   imm8:51
+575000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 56 **********************
+585000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 57 **********************
+595000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 58 **********************
+600000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+600000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+605000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 59 **********************
+610000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+610000.00ns DEBUG    Performance Model                  PC:0x44          PC:0x44
+610000.00ns DEBUG    Performance Model                  Register0: 0x330         0x330
+610000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+610000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+610000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+610000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+610000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+610000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+610000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+610000.00ns DEBUG    Performance Model                  Register8: 0x26          0x26
+610000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+610000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+610000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+610000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+610000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+610000.00ns DEBUG    Performance Model                  Register14: 0x40         0x40
+610000.00ns DEBUG    Performance Model                  Register15: 0x48         0x48
+610000.00ns DEBUG    Performance Model                  **************** Instruction No: 17 **********************
+610000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+610000.00ns DEBUG    Performance Model                  Binary string:11100011101000001111000000010000
+610000.00ns DEBUG    Performance Model                  Operation type Data Processing
+610000.00ns DEBUG    Performance Model                  cond:E
+610000.00ns DEBUG    Performance Model                  Immediate bit:1
+610000.00ns DEBUG    Performance Model                  cmd:D
+610000.00ns DEBUG    Performance Model                  Set bit:0
+610000.00ns DEBUG    Performance Model                  Rn:0     Rd:15
+610000.00ns DEBUG    Performance Model                  rot:0    imm8:16
+615000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 60 **********************
+625000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 61 **********************
+635000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 62 **********************
+640000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+640000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+645000.00ns DEBUG    Performance Model                  **************** Positive Clock Edge: 63 **********************
+650000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+650000.00ns DEBUG    Performance Model                  PC:0x10          PC:0x10
+650000.00ns DEBUG    Performance Model                  Register0: 0x330         0x330
+650000.00ns DEBUG    Performance Model                  Register1: 0x13          0x13
+650000.00ns DEBUG    Performance Model                  Register2: 0x26          0x26
+650000.00ns DEBUG    Performance Model                  Register3: 0x2           0x2
+650000.00ns DEBUG    Performance Model                  Register4: 0x4c          0x4c
+650000.00ns DEBUG    Performance Model                  Register5: 0xa           0xa
+650000.00ns DEBUG    Performance Model                  Register6: 0x80000002    0x80000002
+650000.00ns DEBUG    Performance Model                  Register7: 0xfffffff8    0xfffffff8
+650000.00ns DEBUG    Performance Model                  Register8: 0x26          0x26
+650000.00ns DEBUG    Performance Model                  Register9: 0x0           0x0
+650000.00ns DEBUG    Performance Model                  Register10: 0x0          0x0
+650000.00ns DEBUG    Performance Model                  Register11: 0x0          0x0
+650000.00ns DEBUG    Performance Model                  Register12: 0x0          0x0
+650000.00ns DEBUG    Performance Model                  Register13: 0x0          0x0
+650000.00ns DEBUG    Performance Model                  Register14: 0x40         0x40
+650000.00ns DEBUG    Performance Model                  Register15: 0x14         0x14
+651000.00ns INFO     cocotb.regression                  Multi_cycle_test passed
+651000.00ns INFO     cocotb.regression                  *******************************************************************************************
+                                                        ** TEST                               STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        *******************************************************************************************
+                                                        ** Multi_Cycle_Test.Multi_cycle_test   PASS      651000.00           0.11    6033249.60  **
+                                                        *******************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0                  651000.00           0.26    2539966.48  **
+                                                        *******************************************************************************************
+
+make[1]: Leaving directory '/c/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp3/EE446_EXP3_2375467_code/CocoTB/Test'
+(base) PS C:\Users\alper\Desktop\EE\EE5-2\EE446\Prelim\Exp3\EE446_EXP3_2375467_code\CocoTB\Test>
