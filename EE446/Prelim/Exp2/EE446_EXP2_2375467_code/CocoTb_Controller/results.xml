@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1710623121" />
+    <testcase name="CTRL_TEST" classname="CTRL_TEST" file="C:\Users\alper\Desktop\EE\EE5-2\EE446\Prelim\Exp2\EE446_EXP2_2375467_code\CocoTb_Controller\CTRL_TEST.py" lineno="9" time="0.003865480422973633" sim_time_ns="6000" ratio_time="1552200.333066058" />
+  </testsuite>
+</testsuites>

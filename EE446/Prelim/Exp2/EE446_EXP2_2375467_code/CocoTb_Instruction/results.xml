@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1710623091" />
+    <testcase name="CTRL_TEST" classname="Inst_Memory_test" file="C:\Users\alper\Desktop\EE\EE5-2\EE446\Prelim\Exp2\EE446_EXP2_2375467_code\CocoTb_Instruction\Inst_Memory_test.py" lineno="9" time="0.004704952239990234" sim_time_ns="1000" ratio_time="212542.00871592175" />
+  </testsuite>
+</testsuites>

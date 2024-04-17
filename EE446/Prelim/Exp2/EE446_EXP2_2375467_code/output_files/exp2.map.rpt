@@ -1,0 +1,1221 @@
+Analysis & Synthesis report for exp2
+Thu Apr 11 03:11:10 2024
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 11. Parameter Settings for User Entity Instance: Top-level Entity: |datapath
+ 12. Parameter Settings for User Entity Instance: Register_file:reg_file_dp
+ 13. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg
+ 14. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[1].Reg
+ 15. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[2].Reg
+ 16. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[3].Reg
+ 17. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[4].Reg
+ 18. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[5].Reg
+ 19. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[6].Reg
+ 20. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[7].Reg
+ 21. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[8].Reg
+ 22. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[9].Reg
+ 23. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[10].Reg
+ 24. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[11].Reg
+ 25. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[12].Reg
+ 26. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[13].Reg
+ 27. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[14].Reg
+ 28. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Mux_16to1:mux_0
+ 29. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Mux_16to1:mux_1
+ 30. Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Mux_16to1:mux_2
+ 31. Parameter Settings for User Entity Instance: Mux_2to1:REG_FILE_DEST_SELECT_MUX
+ 32. Parameter Settings for User Entity Instance: Mux_2to1:REG_FILE_DATA_MUX
+ 33. Parameter Settings for User Entity Instance: shifter:SHIFT
+ 34. Parameter Settings for User Entity Instance: Mux_2to1:SHIFT_MUX_CONTROL
+ 35. Parameter Settings for User Entity Instance: Mux_2to1:SHIFT_MUX_DATA
+ 36. Parameter Settings for User Entity Instance: Mux_2to1:SHIFT_MUX_SHAMT
+ 37. Parameter Settings for User Entity Instance: Mux_2to1:BX_DATA_MUX
+ 38. Parameter Settings for User Entity Instance: Memory:DATA_MEMORY
+ 39. Parameter Settings for User Entity Instance: Mux_2to1:SRC_B_MUX
+ 40. Parameter Settings for User Entity Instance: Mux_2to1:DATA_MEMORY_MUX
+ 41. Parameter Settings for User Entity Instance: ALU:ALU
+ 42. Parameter Settings for User Entity Instance: Register_en:reg_z
+ 43. Parameter Settings for User Entity Instance: Inst_Memory:INST_MEMORY
+ 44. Parameter Settings for User Entity Instance: Mux_2to1:PC_MUX
+ 45. Parameter Settings for User Entity Instance: Adder:PC_PLUS_4
+ 46. Parameter Settings for User Entity Instance: Adder:PC_PLUS_8
+ 47. Parameter Settings for User Entity Instance: Register_reset:PC_REG
+ 48. Parameter Settings for User Entity Instance: Mux_2to1:RA1_MUX
+ 49. Parameter Settings for User Entity Instance: Mux_2to1:RA2_MUX
+ 50. Port Connectivity Checks: "Mux_2to1:RA1_MUX"
+ 51. Port Connectivity Checks: "Adder:PC_PLUS_8"
+ 52. Port Connectivity Checks: "Adder:PC_PLUS_4"
+ 53. Port Connectivity Checks: "ALU:ALU"
+ 54. Port Connectivity Checks: "Mux_2to1:SHIFT_MUX_SHAMT"
+ 55. Port Connectivity Checks: "Mux_2to1:SHIFT_MUX_DATA"
+ 56. Port Connectivity Checks: "Mux_2to1:SHIFT_MUX_CONTROL"
+ 57. Port Connectivity Checks: "Mux_2to1:REG_FILE_DEST_SELECT_MUX"
+ 58. Port Connectivity Checks: "Register_file:reg_file_dp|Decoder_4to16:dec"
+ 59. Elapsed Time Per Partition
+ 60. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Apr 11 03:11:10 2024      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; exp2                                       ;
+; Top-level Entity Name              ; datapath                                   ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 11,635                                     ;
+;     Total combinational functions  ; 11,633                                     ;
+;     Dedicated logic registers      ; 2,113                                      ;
+; Total registers                    ; 2113                                       ;
+; Total pins                         ; 237                                        ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; datapath           ; exp2               ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
++----------------------------------+-----------------+---------------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                                   ; File Name with Absolute Path                                                                   ; Library ;
++----------------------------------+-----------------+---------------------------------------------+------------------------------------------------------------------------------------------------+---------+
+; shifter.v                        ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/shifter.v            ;         ;
+; Register_rsten_neg.v             ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Register_rsten_neg.v ;         ;
+; Register_reset.v                 ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Register_reset.v     ;         ;
+; Register_file.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Register_file.v      ;         ;
+; Register_en.v                    ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Register_en.v        ;         ;
+; Mux_2to1.v                       ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Mux_2to1.v           ;         ;
+; Mux_16to1.v                      ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Mux_16to1.v          ;         ;
+; Memory.v                         ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Memory.v             ;         ;
+; Instruction_memory.v             ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Instruction_memory.v ;         ;
+; Extender.v                       ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Extender.v           ;         ;
+; Decoder_4to16.v                  ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Decoder_4to16.v      ;         ;
+; Adder.v                          ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/Adder.v              ;         ;
+; ALU.v                            ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/ALU.v                ;         ;
+; datapath.v                       ; yes             ; User Verilog HDL File                       ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/datapath.v           ;         ;
+; instructions.hex                 ; yes             ; Auto-Found Hexadecimal (Intel-Format) File  ; C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp2/EE446_EXP2_2375467_code/instructions.hex     ;         ;
++----------------------------------+-----------------+---------------------------------------------+------------------------------------------------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 237              ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; clk~input        ;
+; Maximum fan-out          ; 2113             ;
+; Total fan-out            ; 50864            ;
+; Average fan-out          ; 3.58             ;
++--------------------------+------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                          ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                  ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                     ; Library Name ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+; |datapath                                   ; 11633 (0)         ; 2113 (0)     ; 0           ; 0            ; 0       ; 0         ; 0         ; 237  ; 0            ; |datapath                                                               ; work         ;
+;    |ALU:ALU|                                ; 401 (401)         ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|ALU:ALU                                                       ; work         ;
+;    |Adder:PC_PLUS_4|                        ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Adder:PC_PLUS_4                                               ; work         ;
+;    |Adder:PC_PLUS_8|                        ; 30 (30)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Adder:PC_PLUS_8                                               ; work         ;
+;    |Memory:DATA_MEMORY|                     ; 6890 (6890)       ; 2048 (2048)  ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Memory:DATA_MEMORY                                            ; work         ;
+;    |Mux_2to1:DATA_MEMORY_MUX|               ; 4080 (4080)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Mux_2to1:DATA_MEMORY_MUX                                      ; work         ;
+;    |Mux_2to1:SRC_B_MUX|                     ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Mux_2to1:SRC_B_MUX                                            ; work         ;
+;    |Register_en:reg_z|                      ; 12 (12)           ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Register_en:reg_z                                             ; work         ;
+;    |Register_file:reg_file_dp|              ; 100 (0)           ; 32 (0)       ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Register_file:reg_file_dp                                     ; work         ;
+;       |Mux_16to1:mux_0|                     ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Register_file:reg_file_dp|Mux_16to1:mux_0                     ; work         ;
+;       |Mux_16to1:mux_2|                     ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Register_file:reg_file_dp|Mux_16to1:mux_2                     ; work         ;
+;       |Register_rsten_neg:registers[0].Reg| ; 35 (35)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg ; work         ;
+;    |Register_reset:PC_REG|                  ; 58 (58)           ; 32 (32)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |datapath|Register_reset:PC_REG                                         ; work         ;
++---------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-------------------------------------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                 ;
++---------------------------------------------------------------------------+----------------------------------------+
+; Register name                                                             ; Reason for Removal                     ;
++---------------------------------------------------------------------------+----------------------------------------+
+; Register_file:reg_file_dp|Register_rsten_neg:registers[14].Reg|OUT[0..31] ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[13].Reg|OUT[0..31] ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[12].Reg|OUT[0..31] ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[11].Reg|OUT[0..31] ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[10].Reg|OUT[0..31] ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[9].Reg|OUT[0..31]  ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[8].Reg|OUT[0..31]  ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[7].Reg|OUT[0..31]  ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[6].Reg|OUT[0..31]  ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[5].Reg|OUT[0..31]  ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[4].Reg|OUT[0..31]  ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[3].Reg|OUT[0..31]  ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[2].Reg|OUT[0..31]  ; Stuck at GND due to stuck port data_in ;
+; Register_file:reg_file_dp|Register_rsten_neg:registers[1].Reg|OUT[0..31]  ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 448                                   ;                                        ;
++---------------------------------------------------------------------------+----------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 2113  ;
+; Number of registers using Synchronous Clear  ; 30    ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 2082  ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                      ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |datapath|Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg|OUT[19] ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |datapath|Register_reset:PC_REG|OUT[1]                                          ;
+; 3:1                ; 30 bits   ; 60 LEs        ; 60 LEs               ; 0 LEs                  ; Yes        ; |datapath|Register_reset:PC_REG|OUT[5]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[255][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[254][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[253][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[252][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[251][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[250][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[249][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[248][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[247][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[246][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[245][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[244][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[243][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[242][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[241][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[240][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[239][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[238][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[237][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[236][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[235][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[234][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[233][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[232][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[231][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[230][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[229][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[228][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[227][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[226][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[225][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[224][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[223][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[222][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[221][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[220][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[219][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[218][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[217][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[216][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[215][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[214][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[213][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[212][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[211][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[210][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[209][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[208][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[207][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[206][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[205][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[204][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[203][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[202][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[201][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[200][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[199][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[198][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[197][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[196][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[195][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[194][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[193][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[192][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[191][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[190][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[189][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[188][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[187][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[186][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[185][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[184][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[183][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[182][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[181][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[180][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[179][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[178][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[177][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[176][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[175][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[174][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[173][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[172][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[171][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[170][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[169][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[168][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[167][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[166][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[165][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[164][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[163][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[162][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[161][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[160][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[159][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[158][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[157][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[156][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[155][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[154][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[153][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[152][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[151][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[150][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[149][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[148][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[147][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[146][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[145][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[144][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[143][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[142][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[141][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[140][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[139][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[138][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[137][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[136][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[135][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[134][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[133][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[132][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[131][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[130][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[129][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[128][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[127][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[126][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[125][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[124][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[123][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[122][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[121][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[120][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[119][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[118][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[117][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[116][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[115][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[114][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[113][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[112][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[111][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[110][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[109][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[108][7]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[107][6]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[106][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[105][1]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[104][0]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[103][2]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[102][5]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[101][4]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[100][3]                                        ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[99][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[98][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[97][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[96][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[95][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[94][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[93][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[92][1]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[91][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[90][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[89][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[88][7]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[87][1]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[86][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[85][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[84][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[83][1]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[82][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[81][1]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[80][1]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[79][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[78][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[77][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[76][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[75][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[74][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[73][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[72][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[71][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[70][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[69][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[68][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[67][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[66][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[65][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[64][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[63][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[62][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[61][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[60][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[59][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[58][7]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[57][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[56][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[55][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[54][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[53][1]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[52][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[51][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[50][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[49][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[48][7]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[47][7]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[46][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[45][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[44][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[43][1]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[42][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[41][1]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[40][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[39][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[38][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[37][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[36][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[35][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[34][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[33][7]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[32][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[31][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[30][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[29][1]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[28][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[27][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[26][3]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[25][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[24][2]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[23][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[22][0]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[21][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[20][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[19][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[18][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[17][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[16][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[15][5]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[14][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[13][6]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[12][7]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[11][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[10][4]                                         ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[9][4]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[8][2]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[7][2]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[6][6]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[5][3]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[4][2]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[3][4]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[2][1]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[1][0]                                          ;
+; 5:1                ; 8 bits    ; 24 LEs        ; 16 LEs               ; 8 LEs                  ; Yes        ; |datapath|Memory:DATA_MEMORY|mem[0][7]                                          ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; No         ; |datapath|ALU:ALU|Add4                                                          ;
+; 16:1               ; 32 bits   ; 320 LEs       ; 64 LEs               ; 256 LEs                ; No         ; |datapath|Register_file:reg_file_dp|Mux_16to1:mux_2|Mux0                        ;
+; 11:1               ; 32 bits   ; 224 LEs       ; 192 LEs              ; 32 LEs                 ; No         ; |datapath|ALU:ALU|Mux18                                                         ;
+; 129:1              ; 8 bits    ; 688 LEs       ; 688 LEs              ; 0 LEs                  ; No         ; |datapath|Mux_2to1:DATA_MEMORY_MUX|output_value[17]                             ;
+; 129:1              ; 8 bits    ; 688 LEs       ; 688 LEs              ; 0 LEs                  ; No         ; |datapath|Mux_2to1:DATA_MEMORY_MUX|output_value[5]                              ;
+; 257:1              ; 8 bits    ; 1368 LEs      ; 1368 LEs             ; 0 LEs                  ; No         ; |datapath|Mux_2to1:DATA_MEMORY_MUX|output_value[24]                             ;
+; 257:1              ; 8 bits    ; 1368 LEs      ; 1368 LEs             ; 0 LEs                  ; No         ; |datapath|Mux_2to1:DATA_MEMORY_MUX|output_value[14]                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |datapath ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp ;
++----------------+-------+-----------------------------------------------+
+; Parameter Name ; Value ; Type                                          ;
++----------------+-------+-----------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                ;
++----------------+-------+-----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[1].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[2].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[3].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[4].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[5].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[6].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[7].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[8].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[9].Reg ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                              ;
++----------------+-------+-----------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                    ;
++----------------+-------+-----------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[10].Reg ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[11].Reg ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[12].Reg ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[13].Reg ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Register_rsten_neg:registers[14].Reg ;
++----------------+-------+------------------------------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                                               ;
++----------------+-------+------------------------------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                                     ;
++----------------+-------+------------------------------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Mux_16to1:mux_0 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Mux_16to1:mux_1 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_file:reg_file_dp|Mux_16to1:mux_2 ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:REG_FILE_DEST_SELECT_MUX ;
++----------------+-------+-------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                  ;
++----------------+-------+-------------------------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                                        ;
++----------------+-------+-------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:REG_FILE_DATA_MUX ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: shifter:SHIFT ;
++----------------+-------+-----------------------------------+
+; Parameter Name ; Value ; Type                              ;
++----------------+-------+-----------------------------------+
+; WIDTH          ; 32    ; Signed Integer                    ;
++----------------+-------+-----------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:SHIFT_MUX_CONTROL ;
++----------------+-------+------------------------------------------------+
+; Parameter Name ; Value ; Type                                           ;
++----------------+-------+------------------------------------------------+
+; WIDTH          ; 2     ; Signed Integer                                 ;
++----------------+-------+------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:SHIFT_MUX_DATA ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:SHIFT_MUX_SHAMT ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 5     ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:BX_DATA_MUX ;
++----------------+-------+------------------------------------------+
+; Parameter Name ; Value ; Type                                     ;
++----------------+-------+------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                           ;
++----------------+-------+------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Memory:DATA_MEMORY ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; BYTE_SIZE      ; 4     ; Signed Integer                         ;
+; ADDR_WIDTH     ; 32    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:SRC_B_MUX ;
++----------------+-------+----------------------------------------+
+; Parameter Name ; Value ; Type                                   ;
++----------------+-------+----------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                         ;
++----------------+-------+----------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++-----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:DATA_MEMORY_MUX ;
++----------------+-------+----------------------------------------------+
+; Parameter Name ; Value ; Type                                         ;
++----------------+-------+----------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                               ;
++----------------+-------+----------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------+
+; Parameter Settings for User Entity Instance: ALU:ALU ;
++----------------+-------+-----------------------------+
+; Parameter Name ; Value ; Type                        ;
++----------------+-------+-----------------------------+
+; WIDTH          ; 32    ; Signed Integer              ;
++----------------+-------+-----------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_en:reg_z ;
++----------------+-------+---------------------------------------+
+; Parameter Name ; Value ; Type                                  ;
++----------------+-------+---------------------------------------+
+; WIDTH          ; 1     ; Signed Integer                        ;
++----------------+-------+---------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Inst_Memory:INST_MEMORY ;
++----------------+-------+---------------------------------------------+
+; Parameter Name ; Value ; Type                                        ;
++----------------+-------+---------------------------------------------+
+; BYTE_SIZE      ; 4     ; Signed Integer                              ;
+; ADDR_WIDTH     ; 32    ; Signed Integer                              ;
++----------------+-------+---------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:PC_MUX ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Adder:PC_PLUS_4 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Adder:PC_PLUS_8 ;
++----------------+-------+-------------------------------------+
+; Parameter Name ; Value ; Type                                ;
++----------------+-------+-------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                      ;
++----------------+-------+-------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Register_reset:PC_REG ;
++----------------+-------+-------------------------------------------+
+; Parameter Name ; Value ; Type                                      ;
++----------------+-------+-------------------------------------------+
+; WIDTH          ; 32    ; Signed Integer                            ;
++----------------+-------+-------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:RA1_MUX ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++---------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Mux_2to1:RA2_MUX ;
++----------------+-------+--------------------------------------+
+; Parameter Name ; Value ; Type                                 ;
++----------------+-------+--------------------------------------+
+; WIDTH          ; 4     ; Signed Integer                       ;
++----------------+-------+--------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++----------------------------------------------+
+; Port Connectivity Checks: "Mux_2to1:RA1_MUX" ;
++---------+-------+----------+-----------------+
+; Port    ; Type  ; Severity ; Details         ;
++---------+-------+----------+-----------------+
+; input_1 ; Input ; Info     ; Stuck at VCC    ;
++---------+-------+----------+-----------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "Adder:PC_PLUS_8"     ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; DATA_B[31..3] ; Input ; Info     ; Stuck at GND ;
+; DATA_B[1..0]  ; Input ; Info     ; Stuck at GND ;
+; DATA_B[2]     ; Input ; Info     ; Stuck at VCC ;
++---------------+-------+----------+--------------+
+
+
++-------------------------------------------------+
+; Port Connectivity Checks: "Adder:PC_PLUS_4"     ;
++---------------+-------+----------+--------------+
+; Port          ; Type  ; Severity ; Details      ;
++---------------+-------+----------+--------------+
+; DATA_B[31..3] ; Input ; Info     ; Stuck at GND ;
+; DATA_B[1..0]  ; Input ; Info     ; Stuck at GND ;
+; DATA_B[2]     ; Input ; Info     ; Stuck at VCC ;
++---------------+-------+----------+--------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "ALU:ALU"                                                                                                                                     ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                      ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; CI   ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; CO   ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; OVF  ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
+; N    ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; Port Connectivity Checks: "Mux_2to1:SHIFT_MUX_SHAMT" ;
++------------+-------+----------+----------------------+
+; Port       ; Type  ; Severity ; Details              ;
++------------+-------+----------+----------------------+
+; input_1[0] ; Input ; Info     ; Stuck at GND         ;
++------------+-------+----------+----------------------+
+
+
++-----------------------------------------------------+
+; Port Connectivity Checks: "Mux_2to1:SHIFT_MUX_DATA" ;
++----------------+-------+----------+-----------------+
+; Port           ; Type  ; Severity ; Details         ;
++----------------+-------+----------+-----------------+
+; input_1[31..8] ; Input ; Info     ; Stuck at GND    ;
++----------------+-------+----------+-----------------+
+
+
++--------------------------------------------------------+
+; Port Connectivity Checks: "Mux_2to1:SHIFT_MUX_CONTROL" ;
++---------+-------+----------+---------------------------+
+; Port    ; Type  ; Severity ; Details                   ;
++---------+-------+----------+---------------------------+
+; input_1 ; Input ; Info     ; Stuck at VCC              ;
++---------+-------+----------+---------------------------+
+
+
++---------------------------------------------------------------+
+; Port Connectivity Checks: "Mux_2to1:REG_FILE_DEST_SELECT_MUX" ;
++---------------+-------+----------+----------------------------+
+; Port          ; Type  ; Severity ; Details                    ;
++---------------+-------+----------+----------------------------+
+; input_1[3..1] ; Input ; Info     ; Stuck at VCC               ;
+; input_1[0]    ; Input ; Info     ; Stuck at GND               ;
++---------------+-------+----------+----------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Register_file:reg_file_dp|Decoder_4to16:dec"                                           ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; OUT[15] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:58     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Thu Apr 11 03:10:09 2024
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off exp2 -c exp2
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Warning (10275): Verilog HDL Module Instantiation warning at Project_top_module.v(33): ignored dangling comma in List of Port Connections
+Warning (10275): Verilog HDL Module Instantiation warning at Project_top_module.v(34): ignored dangling comma in List of Port Connections
+Info (12021): Found 1 design units, including 1 entities, in source file project_top_module.v
+    Info (12023): Found entity 1: Project_top_module
+Info (12021): Found 1 design units, including 1 entities, in source file computer_module.v
+    Info (12023): Found entity 1: COMPUTER_MODULE
+Info (12021): Found 1 design units, including 1 entities, in source file shifter.v
+    Info (12023): Found entity 1: shifter
+Info (12021): Found 1 design units, including 1 entities, in source file register_simple.v
+    Info (12023): Found entity 1: Register_simple
+Info (12021): Found 1 design units, including 1 entities, in source file register_rsten_neg.v
+    Info (12023): Found entity 1: Register_rsten_neg
+Info (12021): Found 1 design units, including 1 entities, in source file register_rsten.v
+    Info (12023): Found entity 1: Register_rsten
+Info (12021): Found 1 design units, including 1 entities, in source file register_reset.v
+    Info (12023): Found entity 1: Register_reset
+Info (12021): Found 1 design units, including 1 entities, in source file register_file.v
+    Info (12023): Found entity 1: Register_file
+Info (12021): Found 1 design units, including 1 entities, in source file register_en.v
+    Info (12023): Found entity 1: Register_en
+Info (12021): Found 1 design units, including 1 entities, in source file mux_4to1.v
+    Info (12023): Found entity 1: Mux_4to1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_2to1.v
+    Info (12023): Found entity 1: Mux_2to1
+Info (12021): Found 1 design units, including 1 entities, in source file mux_16to1.v
+    Info (12023): Found entity 1: Mux_16to1
+Info (12021): Found 1 design units, including 1 entities, in source file memory.v
+    Info (12023): Found entity 1: Memory
+Info (12021): Found 1 design units, including 1 entities, in source file instruction_memory.v
+    Info (12023): Found entity 1: Inst_Memory
+Info (12021): Found 1 design units, including 1 entities, in source file hexto7seg.v
+    Info (12023): Found entity 1: hexto7seg
+Info (12021): Found 1 design units, including 1 entities, in source file extender.v
+    Info (12023): Found entity 1: Extender
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_4to16.v
+    Info (12023): Found entity 1: Decoder_4to16
+Info (12021): Found 1 design units, including 1 entities, in source file decoder_2to4.v
+    Info (12023): Found entity 1: Decoder_2to4
+Info (12021): Found 1 design units, including 1 entities, in source file adder.v
+    Info (12023): Found entity 1: Adder
+Info (12021): Found 1 design units, including 1 entities, in source file alu.v
+    Info (12023): Found entity 1: ALU
+Info (12021): Found 1 design units, including 1 entities, in source file datapath.v
+    Info (12023): Found entity 1: datapath
+Info (12021): Found 1 design units, including 1 entities, in source file controller.v
+    Info (12023): Found entity 1: Controller
+Info (12127): Elaborating entity "datapath" for the top level hierarchy
+Info (12128): Elaborating entity "Register_file" for hierarchy "Register_file:reg_file_dp"
+Info (12128): Elaborating entity "Register_rsten_neg" for hierarchy "Register_file:reg_file_dp|Register_rsten_neg:registers[0].Reg"
+Info (12128): Elaborating entity "Decoder_4to16" for hierarchy "Register_file:reg_file_dp|Decoder_4to16:dec"
+Info (12128): Elaborating entity "Mux_16to1" for hierarchy "Register_file:reg_file_dp|Mux_16to1:mux_0"
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "Mux_2to1:REG_FILE_DEST_SELECT_MUX"
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "Mux_2to1:REG_FILE_DATA_MUX"
+Info (12128): Elaborating entity "shifter" for hierarchy "shifter:SHIFT"
+Warning (10230): Verilog HDL assignment warning at shifter.v(20): truncated value with size 64 to match size of target (32)
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "Mux_2to1:SHIFT_MUX_CONTROL"
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "Mux_2to1:SHIFT_MUX_SHAMT"
+Info (12128): Elaborating entity "Extender" for hierarchy "Extender:EXTEND"
+Info (12128): Elaborating entity "Memory" for hierarchy "Memory:DATA_MEMORY"
+Info (12128): Elaborating entity "ALU" for hierarchy "ALU:ALU"
+Info (12128): Elaborating entity "Register_en" for hierarchy "Register_en:reg_z"
+Info (12128): Elaborating entity "Inst_Memory" for hierarchy "Inst_Memory:INST_MEMORY"
+Warning (10850): Verilog HDL warning at Instruction_memory.v(9): number of words (80) in memory file does not match the number of elements in the address range [0:255]
+Warning (10855): Verilog HDL warning at Instruction_memory.v(8): initial value for variable mem should be constant
+Warning (10030): Net "mem" at Instruction_memory.v(6) has no driver or initial value, using a default initial value '0'
+Info (12128): Elaborating entity "Adder" for hierarchy "Adder:PC_PLUS_4"
+Info (12128): Elaborating entity "Register_reset" for hierarchy "Register_reset:PC_REG"
+Info (12128): Elaborating entity "Mux_2to1" for hierarchy "Mux_2to1:RA1_MUX"
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Cond[0]" is stuck at GND
+    Warning (13410): Pin "Cond[1]" is stuck at GND
+    Warning (13410): Pin "Cond[2]" is stuck at GND
+    Warning (13410): Pin "Cond[3]" is stuck at GND
+    Warning (13410): Pin "Op[0]" is stuck at GND
+    Warning (13410): Pin "Op[1]" is stuck at GND
+    Warning (13410): Pin "Funct[0]" is stuck at GND
+    Warning (13410): Pin "Funct[1]" is stuck at GND
+    Warning (13410): Pin "Funct[2]" is stuck at GND
+    Warning (13410): Pin "Funct[3]" is stuck at GND
+    Warning (13410): Pin "Funct[4]" is stuck at GND
+    Warning (13410): Pin "Funct[5]" is stuck at GND
+    Warning (13410): Pin "Rd[0]" is stuck at GND
+    Warning (13410): Pin "Rd[1]" is stuck at GND
+    Warning (13410): Pin "Rd[2]" is stuck at GND
+    Warning (13410): Pin "Rd[3]" is stuck at GND
+    Warning (13410): Pin "RA2[0]" is stuck at GND
+    Warning (13410): Pin "RA2[1]" is stuck at GND
+    Warning (13410): Pin "RA2[2]" is stuck at GND
+    Warning (13410): Pin "RA2[3]" is stuck at GND
+    Warning (13410): Pin "Instruction[0]" is stuck at GND
+    Warning (13410): Pin "Instruction[1]" is stuck at GND
+    Warning (13410): Pin "Instruction[2]" is stuck at GND
+    Warning (13410): Pin "Instruction[3]" is stuck at GND
+    Warning (13410): Pin "Instruction[4]" is stuck at GND
+    Warning (13410): Pin "Instruction[5]" is stuck at GND
+    Warning (13410): Pin "Instruction[6]" is stuck at GND
+    Warning (13410): Pin "Instruction[7]" is stuck at GND
+    Warning (13410): Pin "Instruction[8]" is stuck at GND
+    Warning (13410): Pin "Instruction[9]" is stuck at GND
+    Warning (13410): Pin "Instruction[10]" is stuck at GND
+    Warning (13410): Pin "Instruction[11]" is stuck at GND
+    Warning (13410): Pin "Instruction[12]" is stuck at GND
+    Warning (13410): Pin "Instruction[13]" is stuck at GND
+    Warning (13410): Pin "Instruction[14]" is stuck at GND
+    Warning (13410): Pin "Instruction[15]" is stuck at GND
+    Warning (13410): Pin "Instruction[16]" is stuck at GND
+    Warning (13410): Pin "Instruction[17]" is stuck at GND
+    Warning (13410): Pin "Instruction[18]" is stuck at GND
+    Warning (13410): Pin "Instruction[19]" is stuck at GND
+    Warning (13410): Pin "Instruction[20]" is stuck at GND
+    Warning (13410): Pin "Instruction[21]" is stuck at GND
+    Warning (13410): Pin "Instruction[22]" is stuck at GND
+    Warning (13410): Pin "Instruction[23]" is stuck at GND
+    Warning (13410): Pin "Instruction[24]" is stuck at GND
+    Warning (13410): Pin "Instruction[25]" is stuck at GND
+    Warning (13410): Pin "Instruction[26]" is stuck at GND
+    Warning (13410): Pin "Instruction[27]" is stuck at GND
+    Warning (13410): Pin "Instruction[28]" is stuck at GND
+    Warning (13410): Pin "Instruction[29]" is stuck at GND
+    Warning (13410): Pin "Instruction[30]" is stuck at GND
+    Warning (13410): Pin "Instruction[31]" is stuck at GND
+Info (286030): Timing-Driven Synthesis is running
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "ImmSrc[0]"
+    Warning (15610): No output dependent on input pin "ImmSrc[1]"
+    Warning (15610): No output dependent on input pin "RegSrc[1]"
+Info (21057): Implemented 11874 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 20 input pins
+    Info (21059): Implemented 217 output pins
+    Info (21061): Implemented 11637 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 65 warnings
+    Info: Peak virtual memory: 4753 megabytes
+    Info: Processing ended: Thu Apr 11 03:11:10 2024
+    Info: Elapsed time: 00:01:01
+    Info: Total CPU time (on all processors): 00:00:59
+
+

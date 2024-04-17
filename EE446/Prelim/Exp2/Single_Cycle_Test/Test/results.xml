@@ -1,0 +1,6 @@
+<testsuites name="results">
+  <testsuite name="all" package="all">
+    <property name="random_seed" value="1711377284" />
+    <testcase name="Single_cycle_test" classname="Single_Cycle_Test" file="C:\Users\alper\Desktop\EE\EE5-2\EE446\Prelim\Single_Cycle_Test\Test\Single_Cycle_Test.py" lineno="1" time="0.06622481346130371" sim_time_ns="161000" ratio_time="2431112.9255815125" />
+  </testsuite>
+</testsuites>

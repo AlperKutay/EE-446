@@ -1,0 +1,6 @@
+module Main(
+	input CLK,
+	input RESET,
+	output [31:0] OUT,
+	output FlagZ
+);
