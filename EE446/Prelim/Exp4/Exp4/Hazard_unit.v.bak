@@ -1,0 +1,17 @@
+module Hazard_Unit #(parameter WIDTH=32)
+(
+  input clk, reset,
+  input BranchTakenE,PCSrcW,ALUSrcE,RegWriteW,MemtoRegW,MemWriteM,
+  input [1:0] ImmSrcD,
+  input [1:0] RegSrcD,
+  input [3:0] ALUControlE,
+  input [3:0] Debug_Source_select,
+  input Write_Z_ENABLE,StallF,StallD,FlushD,FlushE,ForwardAE,ForwardBE,
+  
+  output [3:0] Cond,
+  output [1:0] Op,
+  output [5:0] Funct,
+  output [WIDTH-1:0] PCFetch,
+  output Z_FLAG,
+  output [WIDTH-1:0] Debug_out
+);

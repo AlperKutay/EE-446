@@ -1,0 +1,8 @@
+module Pipeline_Computer#(parameter WIDTH=32)(
+	input clk,
+	input reset,
+	input [3:0] debug_reg_select, 
+	output [31:0] debug_reg_out,
+	output [31:0] PC,
+	output [3:0] fsm_state
+);

@@ -1,0 +1,39 @@
+module Condition_Check(
+	input [1:0] FlagWriteE,
+	input FlagsE,
+	input [3:0] CondE,	
+	
+	output reg Flags,
+	output reg CondEx
+); 
+
+always @(*) begin//Conditional Logic
+
+	case(Cond)
+		4'b0000:
+		begin // Equal
+			if(Z_FLAG == 1)
+				Cond_EX <= 1;
+			else
+				Cond_EX <= 0;
+		end
+		
+		4'b0001:
+		begin	// Not Equal
+			if(Z_FLAG == 0)
+				Cond_EX <= 1;
+			else 	
+				Cond_EX <= 0;
+		end
+		
+		4'b1110:
+		begin  // Always
+			Cond_EX <= 1;
+		end
+		
+		default: begin
+			Cond_EX <= 1;
+		end			
+endcase		 
+end
+endmodule

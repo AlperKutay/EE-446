@@ -1,0 +1,19 @@
+module Controller(
+	input clk,
+	input [3:0] Cond,
+	input [1:0] Op,
+	input [5:0] Funct,
+	input [3:0] Rd,	
+	input Z_FLAG,
+	
+	output reg PCSrc,
+	output reg MemtoReg,
+	output reg Mem_Write,
+	output reg [3:0] ALUControl,
+	output reg ALUSrc,
+	output reg [1:0]ImmSrc,
+	output reg RegWrite,
+	output reg [1:0]RegSrc,
+	output reg Cond_EX,
+	output reg Write_Z_ENABLE
+); 

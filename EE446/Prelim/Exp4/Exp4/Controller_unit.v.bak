@@ -1,0 +1,14 @@
+module Control_unit(
+	input [1:0] Op,
+	input [5:0] Funct,
+	input [3:0] Rd,
+	input [11:0] Src2,
+	
+	output reg PCSrc, RegWrite, MemWrite, ALUSrc, MemtoReg,
+	output reg [3:0] ALUControl,
+	output reg [1:0] FlagWrite, ImmSrc,
+	output reg [2:0] RegSrc,
+	
+	output reg [1:0] ShiftControl,
+	output reg [4:0] shamt
+);

@@ -1,0 +1,3931 @@
+(base) PS C:\Users\alper\Desktop\EE\EE5-2\EE446\Prelim\Exp4\Pipeline_ARM\Test> make
+bash: C:Usersalperanaconda3python.exe: command not found
+bash: C:Usersalperanaconda3python.exe: command not found
+rm -f results.xml
+/usr/bin/make -f Makefile results.xml
+make[1]: Entering directory '/c/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp4/Pipeline_ARM/Test'
+bash: C:Usersalperanaconda3python.exe: command not found
+bash: C:Usersalperanaconda3python.exe: command not found
+rm -f results.xml
+MODULE=Pipeline_Test TESTCASE= TOPLEVEL=Pipeline_Computer TOPLEVEL_LANG=verilog \
+         /c/iverilog/bin/vvp -M C:/Users/alper/anaconda3/Lib/site-packages/cocotb/libs -m cocotbvpi_icarus   sim_build/sim.vvp
+     -.--ns INFO     gpi                                ..mbed\gpi_embed.cpp:78   in set_program_name_in_venv        Did not detect Python virtual environment. Using system-wide Python interpreter
+     -.--ns INFO     gpi                                ..\gpi\GpiCommon.cpp:101  in gpi_print_registered_impl       VPI registered
+     0.00ns INFO     cocotb                             Running on Icarus Verilog version 12.0 (devel)
+     0.00ns INFO     cocotb                             Running tests with cocotb v1.8.1 from C:\Users\alper\anaconda3\Lib\site-packages\cocotb
+     0.00ns INFO     cocotb                             Seeding Python random module with 1713048369
+     0.00ns INFO     cocotb.regression                  Found test Pipeline_Test.Pipeline_test
+     0.00ns INFO     cocotb.regression                  ←[34mrunning←[49m←[39m Pipeline_test (1/1)
+WARNING: C:/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp4/Pipeline_ARM/Test/../../Exp4/Instruction_memory.v:9: $readmemh: The behaviour for reg[...] mem[N:0]; $readmemh("...", mem); changed in the 1364-2005 standard. To avoid ambiguity, use mem[0:N] or explicit range parameters $readmemh("...", mem, start, stop);. Defaulting to 1364-2005 behavior.
+ 10000.00ns DEBUG    Performance Model                  Current Instruction is not executed
+4 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] DATA <Helper_lib.Instruction object at 0x000001BC11504890>
+8 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] DATA <Helper_lib.Instruction object at 0x000001BC13002C50>
+12 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] DATA <Helper_lib.Instruction object at 0x000001BC13002BD0>
+16 [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0] STALLFLUSH -1
+20 [0, 19, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8] STALLFLUSH -1
+20 [0, 19, 38, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12] BRANCH <Helper_lib.Instruction object at 0x000001BC13002990>
+24 [0, 19, 38, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16] DATA <Helper_lib.Instruction object at 0x000001BC13003350>
+28 [0, 19, 38, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16] DATA <Helper_lib.Instruction object at 0x000001BC130034D0>
+32 [0, 19, 38, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16] DATA <Helper_lib.Instruction object at 0x000001BC130033D0>
+36 [0, 19, 38, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 20] DATA <Helper_lib.Instruction object at 0x000001BC13003490>
+40 [0, 19, 38, 2, 76, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28] STR <Helper_lib.Instruction object at 0x000001BC13003390>
+44 [0, 19, 38, 2, 76, 10, 0, 0, 0, 0, 0, 0, 0, 0, 0, 32] LDR <Helper_lib.Instruction object at 0x000001BC13003710>
+48 [0, 19, 38, 2, 76, 10, 2147483650, 0, 0, 0, 0, 0, 0, 0, 0, 36] STALLFLUSH -1
+48 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 0, 0, 0, 0, 0, 0, 0, 40] DATA <Helper_lib.Instruction object at 0x000001BC13003510>
+52 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 0, 0, 0, 0, 0, 0, 0, 44] NOTEXECUTED <Helper_lib.Instruction object at 0x000001BC13003650>
+56 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 0, 48] STALLFLUSH -1
+60 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 0, 48] STALLFLUSH -1
+60 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 0, 52] BRANCH <Helper_lib.Instruction object at 0x000001BC12E56410>
+64 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 0, 56] STALLFLUSH -1
+68 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 0, 56] STALLFLUSH -1
+76 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 0, 56] BRANCH <Helper_lib.Instruction object at 0x000001BC13003250>
+80 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 0, 60] STALLFLUSH -1
+84 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 0, 60] STALLFLUSH -1
+64 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 0, 60] BRANCH <Helper_lib.Instruction object at 0x000001BC13003290>
+68 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 64, 68] DATA <Helper_lib.Instruction object at 0x000001BC130032D0>
+-1 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 64, 68] STALLFLUSH -1
+-1 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 64, 68] STALLFLUSH -1
+-1 [0, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 64, 84] STALLFLUSH -1
+-1 [816, 19, 38, 2, 76, 10, 2147483650, 4294967288, 38, 0, 0, 0, 0, 0, 64, 72] STALLFLUSH -1
+ 10000.00ns DEBUG    Performance Model                  **************** Clock cycle: 0 **********************
+ 10000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 10000.00ns DEBUG    Performance Model                  Binary string:11100011101000000001000000010011
+ 10000.00ns DEBUG    Performance Model                  Operation type Data Processing
+ 10000.00ns DEBUG    Performance Model                  cond:E
+ 10000.00ns DEBUG    Performance Model                  Immediate bit:1
+ 10000.00ns DEBUG    Performance Model                  cmd:D
+ 10000.00ns DEBUG    Performance Model                  Set bit:0
+ 10000.00ns DEBUG    Performance Model                  Rn:0     Rd:1
+ 10000.00ns DEBUG    Performance Model                  rot:0    imm8:19
+ 15000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0xe3a01013
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000000
+my_datapath.PCPlus4D        = 0x00000000
+my_datapath.PCPlus4F        = 0x00000004
+my_datapath.PCPlus8D        = 0x00000004
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000004
+my_datapath.PC_NEXT_NEXT    = 0x00000004
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = 0x00000000
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+ 15000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 0000
+my_controller.CondE           = 0000
+my_controller.CondEx          = 0
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 0
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+ 16000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 16000.00ns DEBUG    Performance Model                  PC:0x4   PC:0x4
+ 16000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:1: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:2: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:3: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+ 16000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+ 16000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+ 16000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+ 16000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+ 16000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+ 16000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x8
+ 16000.00ns DEBUG    Performance Model                  **************** Clock cycle: 1 **********************
+ 16000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 16000.00ns DEBUG    Performance Model                  Binary string:11100000100000010010000000000001
+ 16000.00ns DEBUG    Performance Model                  Operation type Data Processing
+ 16000.00ns DEBUG    Performance Model                  cond:E
+ 16000.00ns DEBUG    Performance Model                  Immediate bit:0
+ 16000.00ns DEBUG    Performance Model                  cmd:4
+ 16000.00ns DEBUG    Performance Model                  Set bit:0
+ 16000.00ns DEBUG    Performance Model                  Rn:1     Rd:2
+ 16000.00ns DEBUG    Performance Model                  shamt5:0         sh:0    Rm:1
+ 25000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000013
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 111010
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0xa01013
+my_datapath.InstructionD    = 0xe3a01013
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0xe0812001
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000004
+my_datapath.PCPlus4D        = 0x00000004
+my_datapath.PCPlus4F        = 0x00000008
+my_datapath.PCPlus8D        = 0x00000008
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000008
+my_datapath.PC_NEXT_NEXT    = 0x00000008
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0011
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0001
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0011
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+ 25000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 1101
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 0000
+my_controller.CondEx          = 0
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 111010
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+ 26000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 26000.00ns DEBUG    Performance Model                  PC:0x8   PC:0x8
+ 26000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:1: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:2: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:3: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+ 26000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+ 26000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+ 26000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+ 26000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+ 26000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+ 26000.00ns DEBUG    Performance Model                  Register:15: Not checked         0xc
+ 26000.00ns DEBUG    Performance Model                  **************** Clock cycle: 2 **********************
+ 26000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 26000.00ns DEBUG    Performance Model                  Binary string:11100000000000010011000000000010
+ 26000.00ns DEBUG    Performance Model                  Operation type Data Processing
+ 26000.00ns DEBUG    Performance Model                  cond:E
+ 26000.00ns DEBUG    Performance Model                  Immediate bit:0
+ 26000.00ns DEBUG    Performance Model                  cmd:0
+ 26000.00ns DEBUG    Performance Model                  Set bit:0
+ 26000.00ns DEBUG    Performance Model                  Rn:1     Rd:3
+ 26000.00ns DEBUG    Performance Model                  shamt5:0         sh:0    Rm:2
+ 35000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 1101
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000013
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000001
+my_datapath.ExtImmE         = 0x00000013
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 001000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x812001
+my_datapath.InstructionD    = 0xe0812001
+my_datapath.InstructionE    = 0xe3a01013
+my_datapath.InstructionF    = 0xe0013002
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000008
+my_datapath.PCPlus4D        = 0x00000008
+my_datapath.PCPlus4F        = 0x0000000c
+my_datapath.PCPlus8D        = 0x0000000c
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x0000000c
+my_datapath.PC_NEXT_NEXT    = 0x0000000c
+my_datapath.RA1D            = 0001
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0001
+my_datapath.RA2E            = 0011
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0010
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0001
+my_datapath.Rn              = 0001
+my_datapath.SHIFTED_DATA    = 0x00000013
+my_datapath.SHIFT_CONTROL   = 11
+my_datapath.SHIFT_DATA      = 0x00000013
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000013
+my_datapath.SrcBEData       = 0x00000013
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0001
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+ 35000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0100
+my_controller.ALUControlE     = 1101
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 001000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+ 36000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 36000.00ns DEBUG    Performance Model                  PC:0xc   PC:0xc
+ 36000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:1: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:2: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:3: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+ 36000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+ 36000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+ 36000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+ 36000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+ 36000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+ 36000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x10
+ 36000.00ns DEBUG    Performance Model                  **************** Clock cycle: 3 **********************
+ 36000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+ 45000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0100
+my_datapath.ALUOutM         = 0x00000013
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000026
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000002
+my_datapath.ExtImmE         = 0x00000001
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 10
+my_datapath.ForwardBE       = 10
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x013002
+my_datapath.InstructionD    = 0xe0013002
+my_datapath.InstructionE    = 0xe0812001
+my_datapath.InstructionF    = 0xea000000
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x0000000c
+my_datapath.PCPlus4D        = 0x0000000c
+my_datapath.PCPlus4F        = 0x00000010
+my_datapath.PCPlus8D        = 0x00000010
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000010
+my_datapath.PC_NEXT_NEXT    = 0x00000010
+my_datapath.RA1D            = 0001
+my_datapath.RA1E            = 0001
+my_datapath.RA2D            = 0010
+my_datapath.RA2E            = 0001
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0011
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0010
+my_datapath.Rn              = 0001
+my_datapath.SHIFTED_DATA    = 0x00000013
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000013
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000013
+my_datapath.SrcB            = 0x00000013
+my_datapath.SrcBE           = 0x00000013
+my_datapath.SrcBEData       = 0x00000013
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0010
+my_datapath.WA3M            = 0001
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+ 45000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 0100
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+ 46000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 46000.00ns DEBUG    Performance Model                  PC:0x10          PC:0x10
+ 46000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:1: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:2: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:3: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+ 46000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+ 46000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+ 46000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+ 46000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+ 46000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+ 46000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x14
+ 46000.00ns DEBUG    Performance Model                  **************** Clock cycle: 4 **********************
+ 46000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+ 55000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000026
+my_datapath.ALUOutW         = 0x00000013
+my_datapath.ALUResultE      = 0x00000002
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0001
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000002
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 01
+my_datapath.ForwardBE       = 10
+my_datapath.Funct           = 100000
+my_datapath.ImmSrcD         = 10
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0xea000000
+my_datapath.InstructionE    = 0xe0013002
+my_datapath.InstructionF    = 0x00000000
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 10
+my_datapath.PCFetch         = 0x00000010
+my_datapath.PCPlus4D        = 0x00000010
+my_datapath.PCPlus4F        = 0x00000014
+my_datapath.PCPlus8D        = 0x00000014
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000014
+my_datapath.PC_NEXT_NEXT    = 0x00000014
+my_datapath.RA1D            = 1111
+my_datapath.RA1E            = 0001
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0010
+my_datapath.RD1             = 0x00000014
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000013
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 01
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000013
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000026
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000026
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000013
+my_datapath.SrcB            = 0x00000026
+my_datapath.SrcBE           = 0x00000026
+my_datapath.SrcBEData       = 0x00000026
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0011
+my_datapath.WA3M            = 0010
+my_datapath.WA3W            = 0001
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+ 55000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0100
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 1
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 1
+my_controller.BranchD         = 1
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 100000
+my_controller.ImmSrcD         = 10
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 10
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 01
+my_controller.RegWriteD       = 0
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+ 56000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 56000.00ns DEBUG    Performance Model                  PC:0x14          PC:0x14
+ 56000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+ 56000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+ 56000.00ns DEBUG    Performance Model                  Register:2: 0x0          0x0
+ 56000.00ns DEBUG    Performance Model                  Register:3: 0x0          0x0
+ 56000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+ 56000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+ 56000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+ 56000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+ 56000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+ 56000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+ 56000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+ 56000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+ 56000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+ 56000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+ 56000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+ 56000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x18
+ 56000.00ns DEBUG    Performance Model                  **************** Clock cycle: 5 **********************
+ 56000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 56000.00ns DEBUG    Performance Model                  Binary string:11101010000000000000000000000000
+ 56000.00ns DEBUG    Performance Model                  Operation type Branch (except Bx)
+ 56000.00ns DEBUG    Performance Model                  Link bit:0
+ 56000.00ns DEBUG    Performance Model                  imm24:0
+ 65000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0100
+my_datapath.ALUOutM         = 0x00000002
+my_datapath.ALUOutW         = 0x00000026
+my_datapath.ALUResultE      = 0x00000014
+my_datapath.ALUSrcE         = 1
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 1
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0010
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 1
+my_datapath.FlushE          = 1
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0xea000000
+my_datapath.InstructionF    = 0xe1a04101
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000014
+my_datapath.PCPlus4D        = 0x00000014
+my_datapath.PCPlus4F        = 0x00000018
+my_datapath.PCPlus8D        = 0x00000018
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000018
+my_datapath.PC_NEXT_NEXT    = 0x00000014
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 1111
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000014
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000026
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000026
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 11
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000014
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0011
+my_datapath.WA3W            = 0010
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+ 65000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 0100
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 1
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 1
+my_controller.BranchTakenE    = 1
+my_controller.Cond            = 0000
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 0
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+ 66000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 66000.00ns DEBUG    Performance Model                  PC:0x14          PC:0x14
+ 66000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+ 66000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+ 66000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+ 66000.00ns DEBUG    Performance Model                  Register:3: 0x0          0x0
+ 66000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+ 66000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+ 66000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+ 66000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+ 66000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+ 66000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+ 66000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+ 66000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+ 66000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+ 66000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+ 66000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+ 66000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x18
+ 66000.00ns DEBUG    Performance Model                  **************** Clock cycle: 6 **********************
+ 66000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 66000.00ns DEBUG    Performance Model                  Binary string:11100001101000000100000100000001
+ 66000.00ns DEBUG    Performance Model                  Operation type Data Processing
+ 66000.00ns DEBUG    Performance Model                  cond:E
+ 66000.00ns DEBUG    Performance Model                  Immediate bit:0
+ 66000.00ns DEBUG    Performance Model                  cmd:D
+ 66000.00ns DEBUG    Performance Model                  Set bit:0
+ 66000.00ns DEBUG    Performance Model                  Rn:0     Rd:4
+ 66000.00ns DEBUG    Performance Model                  shamt5:2         sh:0    Rm:1
+ 75000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000014
+my_datapath.ALUOutW         = 0x00000002
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0011
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0xe1a04101
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000014
+my_datapath.PCPlus4D        = 0x00000000
+my_datapath.PCPlus4F        = 0x00000018
+my_datapath.PCPlus8D        = 0x00000018
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000018
+my_datapath.PC_NEXT_NEXT    = 0x00000018
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000002
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000002
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0011
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+ 75000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 0000
+my_controller.CondE           = 0000
+my_controller.CondEx          = 0
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+ 76000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 76000.00ns DEBUG    Performance Model                  PC:0x18          PC:0x18
+ 76000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+ 76000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+ 76000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+ 76000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+ 76000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+ 76000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+ 76000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+ 76000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+ 76000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+ 76000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+ 76000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+ 76000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+ 76000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+ 76000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+ 76000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+ 76000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x1c
+ 76000.00ns DEBUG    Performance Model                  **************** Clock cycle: 7 **********************
+ 76000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 76000.00ns DEBUG    Performance Model                  Binary string:11100000010000010101000100100010
+ 76000.00ns DEBUG    Performance Model                  Operation type Data Processing
+ 76000.00ns DEBUG    Performance Model                  cond:E
+ 76000.00ns DEBUG    Performance Model                  Immediate bit:0
+ 76000.00ns DEBUG    Performance Model                  cmd:2
+ 76000.00ns DEBUG    Performance Model                  Set bit:0
+ 76000.00ns DEBUG    Performance Model                  Rn:1     Rd:5
+ 76000.00ns DEBUG    Performance Model                  shamt5:2         sh:1    Rm:2
+ 85000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000014
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000001
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 011010
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0xa04101
+my_datapath.InstructionD    = 0xe1a04101
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0xe0415122
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000018
+my_datapath.PCPlus4D        = 0x00000018
+my_datapath.PCPlus4F        = 0x0000001c
+my_datapath.PCPlus8D        = 0x0000001c
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x0000001c
+my_datapath.PC_NEXT_NEXT    = 0x0000001c
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0001
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000013
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000014
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0100
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000014
+my_datapath.Rm              = 0001
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+ 85000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 1101
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 0000
+my_controller.CondEx          = 0
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 011010
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+ 86000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 86000.00ns DEBUG    Performance Model                  PC:0x1c          PC:0x1c
+ 86000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+ 86000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+ 86000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+ 86000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+ 86000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+ 86000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+ 86000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+ 86000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+ 86000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+ 86000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+ 86000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+ 86000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+ 86000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+ 86000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+ 86000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+ 86000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x20
+ 86000.00ns DEBUG    Performance Model                  **************** Clock cycle: 8 **********************
+ 86000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 86000.00ns DEBUG    Performance Model                  Binary string:11100001100000110110000101100011
+ 86000.00ns DEBUG    Performance Model                  Operation type Data Processing
+ 86000.00ns DEBUG    Performance Model                  cond:E
+ 86000.00ns DEBUG    Performance Model                  Immediate bit:0
+ 86000.00ns DEBUG    Performance Model                  cmd:C
+ 86000.00ns DEBUG    Performance Model                  Set bit:0
+ 86000.00ns DEBUG    Performance Model                  Rn:3     Rd:6
+ 86000.00ns DEBUG    Performance Model                  shamt5:2         sh:3    Rm:3
+ 95000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 1101
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x0000004c
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000022
+my_datapath.ExtImmE         = 0x00000001
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 000100
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x415122
+my_datapath.InstructionD    = 0xe0415122
+my_datapath.InstructionE    = 0xe1a04101
+my_datapath.InstructionF    = 0xe1836163
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x0000001c
+my_datapath.PCPlus4D        = 0x0000001c
+my_datapath.PCPlus4F        = 0x00000020
+my_datapath.PCPlus8D        = 0x00000020
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000020
+my_datapath.PC_NEXT_NEXT    = 0x00000020
+my_datapath.RA1D            = 0001
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0010
+my_datapath.RA2E            = 0001
+my_datapath.RD1             = 0x00000013
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000026
+my_datapath.RD2E            = 0x00000013
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00100010
+my_datapath.Rd              = 0101
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0010
+my_datapath.Rn              = 0001
+my_datapath.SHIFTED_DATA    = 0x0000004c
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000013
+my_datapath.SHIFT_SHAMT     = 00010
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000013
+my_datapath.SrcBE           = 0x0000004c
+my_datapath.SrcBEData       = 0x0000004c
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0100
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+ 95000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0010
+my_controller.ALUControlE     = 1101
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000100
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+ 96000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+ 96000.00ns DEBUG    Performance Model                  PC:0x20          PC:0x20
+ 96000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+ 96000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+ 96000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+ 96000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+ 96000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+ 96000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+ 96000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+ 96000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+ 96000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+ 96000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+ 96000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+ 96000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+ 96000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+ 96000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+ 96000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+ 96000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x24
+ 96000.00ns DEBUG    Performance Model                  **************** Clock cycle: 9 **********************
+ 96000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+ 96000.00ns DEBUG    Performance Model                  Binary string:11100001101000000111111001000110
+ 96000.00ns DEBUG    Performance Model                  Operation type Data Processing
+ 96000.00ns DEBUG    Performance Model                  cond:E
+ 96000.00ns DEBUG    Performance Model                  Immediate bit:0
+ 96000.00ns DEBUG    Performance Model                  cmd:D
+ 96000.00ns DEBUG    Performance Model                  Set bit:0
+ 96000.00ns DEBUG    Performance Model                  Rn:0     Rd:7
+ 96000.00ns DEBUG    Performance Model                  shamt5:28        sh:2    Rm:6
+105000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0010
+my_datapath.ALUOutM         = 0x0000004c
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x0000000a
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000063
+my_datapath.ExtImmE         = 0x00000022
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 011000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x836163
+my_datapath.InstructionD    = 0xe1836163
+my_datapath.InstructionE    = 0xe0415122
+my_datapath.InstructionF    = 0xe1a07e46
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000020
+my_datapath.PCPlus4D        = 0x00000020
+my_datapath.PCPlus4F        = 0x00000024
+my_datapath.PCPlus8D        = 0x00000024
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000024
+my_datapath.PC_NEXT_NEXT    = 0x00000024
+my_datapath.RA1D            = 0011
+my_datapath.RA1E            = 0001
+my_datapath.RA2D            = 0011
+my_datapath.RA2E            = 0010
+my_datapath.RD1             = 0x00000002
+my_datapath.RD1E            = 0x00000013
+my_datapath.RD2             = 0x00000002
+my_datapath.RD2E            = 0x00000026
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00100010
+my_datapath.Rd              = 0110
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0011
+my_datapath.Rn              = 0011
+my_datapath.SHIFTED_DATA    = 0x00000009
+my_datapath.SHIFT_CONTROL   = 01
+my_datapath.SHIFT_DATA      = 0x00000026
+my_datapath.SHIFT_SHAMT     = 00010
+my_datapath.SrcAE           = 0x00000013
+my_datapath.SrcB            = 0x00000026
+my_datapath.SrcBE           = 0x00000009
+my_datapath.SrcBEData       = 0x00000009
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0101
+my_datapath.WA3M            = 0100
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000013
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+105000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 1100
+my_controller.ALUControlE     = 0010
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 011000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+106000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+106000.00ns DEBUG    Performance Model                  PC:0x24          PC:0x24
+106000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+106000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+106000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+106000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+106000.00ns DEBUG    Performance Model                  Register:4: 0x0          0x0
+106000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+106000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+106000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+106000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+106000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+106000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+106000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+106000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+106000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+106000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+106000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x28
+106000.00ns DEBUG    Performance Model                  **************** Clock cycle: 10 **********************
+106000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+106000.00ns DEBUG    Performance Model                  Binary string:11100101100000010010000001010101
+106000.00ns DEBUG    Performance Model                  Operation type Memory
+106000.00ns DEBUG    Performance Model                  Load bit:0
+106000.00ns DEBUG    Performance Model                  Rn:1     Rn:2
+106000.00ns DEBUG    Performance Model                  imm12:85
+115000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 1100
+my_datapath.ALUOutM         = 0x0000000a
+my_datapath.ALUOutW         = 0x0000004c
+my_datapath.ALUResultE      = 0x80000002
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0100
+my_datapath.ExtImmD         = 0x00000046
+my_datapath.ExtImmE         = 0x00000063
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 011010
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0xa07e46
+my_datapath.InstructionD    = 0xe1a07e46
+my_datapath.InstructionE    = 0xe1836163
+my_datapath.InstructionF    = 0xe5812055
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000024
+my_datapath.PCPlus4D        = 0x00000024
+my_datapath.PCPlus4F        = 0x00000028
+my_datapath.PCPlus8D        = 0x00000028
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000028
+my_datapath.PC_NEXT_NEXT    = 0x00000028
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0011
+my_datapath.RA2D            = 0110
+my_datapath.RA2E            = 0011
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000002
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000002
+my_datapath.REG_FILE_DATA   = 0x0000004c
+my_datapath.ROT_VALUE       = 00100010
+my_datapath.Rd              = 0111
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x0000004c
+my_datapath.Rm              = 0110
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x80000000
+my_datapath.SHIFT_CONTROL   = 11
+my_datapath.SHIFT_DATA      = 0x00000002
+my_datapath.SHIFT_SHAMT     = 00010
+my_datapath.SrcAE           = 0x00000002
+my_datapath.SrcB            = 0x00000002
+my_datapath.SrcBE           = 0x80000000
+my_datapath.SrcBEData       = 0x80000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0110
+my_datapath.WA3M            = 0101
+my_datapath.WA3W            = 0100
+my_datapath.WriteDataM      = 0x00000026
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+115000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 1101
+my_controller.ALUControlE     = 1100
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 011010
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+116000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+116000.00ns DEBUG    Performance Model                  PC:0x28          PC:0x28
+116000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+116000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+116000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+116000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+116000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+116000.00ns DEBUG    Performance Model                  Register:5: 0x0          0x0
+116000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+116000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+116000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+116000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+116000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+116000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+116000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+116000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+116000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+116000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x2c
+116000.00ns DEBUG    Performance Model                  **************** Clock cycle: 11 **********************
+116000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+116000.00ns DEBUG    Performance Model                  Binary string:11100101100100111000000001100110
+116000.00ns DEBUG    Performance Model                  Operation type Memory
+116000.00ns DEBUG    Performance Model                  Load bit:1
+116000.00ns DEBUG    Performance Model                  Rn:3     Rn:8
+116000.00ns DEBUG    Performance Model                  imm12:102
+125000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 1101
+my_datapath.ALUOutM         = 0x80000002
+my_datapath.ALUOutW         = 0x0000000a
+my_datapath.ALUResultE      = 0xfffffff8
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0101
+my_datapath.ExtImmD         = 0x00000055
+my_datapath.ExtImmE         = 0x00000046
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 10
+my_datapath.Funct           = 011000
+my_datapath.ImmSrcD         = 01
+my_datapath.Inst            = 0x812055
+my_datapath.InstructionD    = 0xe5812055
+my_datapath.InstructionE    = 0xe1a07e46
+my_datapath.InstructionF    = 0xe5938066
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 01
+my_datapath.PCFetch         = 0x00000028
+my_datapath.PCPlus4D        = 0x00000028
+my_datapath.PCPlus4F        = 0x0000002c
+my_datapath.PCPlus8D        = 0x0000002c
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x0000002c
+my_datapath.PC_NEXT_NEXT    = 0x0000002c
+my_datapath.RA1D            = 0001
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0010
+my_datapath.RA2E            = 0110
+my_datapath.RD1             = 0x00000013
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000026
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x0000000a
+my_datapath.ROT_VALUE       = 11011100
+my_datapath.Rd              = 0010
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 10
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x0000000a
+my_datapath.Rm              = 0101
+my_datapath.Rn              = 0001
+my_datapath.SHIFTED_DATA    = 0xfffffff8
+my_datapath.SHIFT_CONTROL   = 10
+my_datapath.SHIFT_DATA      = 0x80000002
+my_datapath.SHIFT_SHAMT     = 11100
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x80000002
+my_datapath.SrcBE           = 0xfffffff8
+my_datapath.SrcBEData       = 0xfffffff8
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0111
+my_datapath.WA3M            = 0110
+my_datapath.WA3W            = 0101
+my_datapath.WriteDataM      = 0x00000002
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+125000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0100
+my_controller.ALUControlE     = 1101
+my_controller.ALUSrcD         = 1
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 011000
+my_controller.ImmSrcD         = 01
+my_controller.MemWriteD       = 1
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 01
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 10
+my_controller.RegWriteD       = 0
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+126000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+126000.00ns DEBUG    Performance Model                  PC:0x2c          PC:0x2c
+126000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+126000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+126000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+126000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+126000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+126000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+126000.00ns DEBUG    Performance Model                  Register:6: 0x0          0x0
+126000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+126000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+126000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+126000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+126000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+126000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+126000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+126000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+126000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x30
+126000.00ns DEBUG    Performance Model                  **************** Clock cycle: 12 **********************
+126000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+135000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0100
+my_datapath.ALUOutM         = 0xfffffff8
+my_datapath.ALUOutW         = 0x80000002
+my_datapath.ALUResultE      = 0x00000068
+my_datapath.ALUSrcE         = 1
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0110
+my_datapath.ExtImmD         = 0x00000066
+my_datapath.ExtImmE         = 0x00000055
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 011001
+my_datapath.ImmSrcD         = 01
+my_datapath.Inst            = 0x938066
+my_datapath.InstructionD    = 0xe5938066
+my_datapath.InstructionE    = 0xe5812055
+my_datapath.InstructionF    = 0xe1520008
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 01
+my_datapath.PCFetch         = 0x0000002c
+my_datapath.PCPlus4D        = 0x0000002c
+my_datapath.PCPlus4F        = 0x00000030
+my_datapath.PCPlus8D        = 0x00000030
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000030
+my_datapath.PC_NEXT_NEXT    = 0x00000030
+my_datapath.RA1D            = 0011
+my_datapath.RA1E            = 0001
+my_datapath.RA2D            = 0110
+my_datapath.RA2E            = 0010
+my_datapath.RD1             = 0x00000002
+my_datapath.RD1E            = 0x00000013
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000026
+my_datapath.REG_FILE_DATA   = 0x80000002
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 1000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x80000002
+my_datapath.Rm              = 0110
+my_datapath.Rn              = 0011
+my_datapath.SHIFTED_DATA    = 0x00000026
+my_datapath.SHIFT_CONTROL   = 10
+my_datapath.SHIFT_DATA      = 0x00000026
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000013
+my_datapath.SrcB            = 0x00000026
+my_datapath.SrcBE           = 0x00000055
+my_datapath.SrcBEData       = 0x00000026
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0010
+my_datapath.WA3M            = 0111
+my_datapath.WA3W            = 0110
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+135000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0100
+my_controller.ALUControlE     = 0100
+my_controller.ALUSrcD         = 1
+my_controller.ALUSrcE         = 1
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 011001
+my_controller.ImmSrcD         = 01
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 1
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 1
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 01
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 0
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+136000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+136000.00ns DEBUG    Performance Model                  PC:0x30          PC:0x30
+136000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+136000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+136000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+136000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+136000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+136000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+136000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+136000.00ns DEBUG    Performance Model                  Register:7: 0x0          0x0
+136000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+136000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+136000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+136000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+136000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+136000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+136000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+136000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x34
+136000.00ns DEBUG    Performance Model                  **************** Clock cycle: 13 **********************
+136000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+136000.00ns DEBUG    Performance Model                  Binary string:11100001010100100000000000001000
+136000.00ns DEBUG    Performance Model                  Operation type Data Processing
+136000.00ns DEBUG    Performance Model                  cond:E
+136000.00ns DEBUG    Performance Model                  Immediate bit:0
+136000.00ns DEBUG    Performance Model                  cmd:A
+136000.00ns DEBUG    Performance Model                  Set bit:1
+136000.00ns DEBUG    Performance Model                  Rn:2     Rd:0
+136000.00ns DEBUG    Performance Model                  shamt5:0         sh:0    Rm:8
+145000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0100
+my_datapath.ALUOutM         = 0x00000068
+my_datapath.ALUOutW         = 0xfffffff8
+my_datapath.ALUResultE      = 0x00000068
+my_datapath.ALUSrcE         = 1
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0111
+my_datapath.ExtImmD         = 0x00000008
+my_datapath.ExtImmE         = 0x00000066
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 1
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 010101
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x520008
+my_datapath.InstructionD    = 0xe1520008
+my_datapath.InstructionE    = 0xe5938066
+my_datapath.InstructionF    = 0x1a000012
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 1
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000030
+my_datapath.PCPlus4D        = 0x00000030
+my_datapath.PCPlus4F        = 0x00000034
+my_datapath.PCPlus8D        = 0x00000034
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000034
+my_datapath.PC_NEXT_NEXT    = 0x00000034
+my_datapath.RA1D            = 0010
+my_datapath.RA1E            = 0011
+my_datapath.RA2D            = 1000
+my_datapath.RA2E            = 0110
+my_datapath.RD1             = 0x00000026
+my_datapath.RD1E            = 0x00000002
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0xfffffff8
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0xfffffff8
+my_datapath.Rm              = 1000
+my_datapath.Rn              = 0010
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 11
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000002
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000066
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 1
+my_datapath.StallF          = 1
+my_datapath.WA3E            = 1000
+my_datapath.WA3M            = 0010
+my_datapath.WA3W            = 0111
+my_datapath.WriteDataM      = 0x00000026
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+145000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0010
+my_controller.ALUControlE     = 0100
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 1
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 010101
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 1
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 1
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 0
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+146000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+146000.00ns DEBUG    Performance Model                  PC:0x30          PC:0x30
+146000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+146000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+146000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+146000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+146000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+146000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+146000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+146000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+146000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+146000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+146000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+146000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+146000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+146000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+146000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+146000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x34
+146000.00ns DEBUG    Performance Model                  **************** Clock cycle: 14 **********************
+146000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+146000.00ns DEBUG    Performance Model                  Binary string:00011010000000000000000000010010
+146000.00ns DEBUG    Performance Model                  Operation type Branch (except Bx)
+146000.00ns DEBUG    Performance Model                  Link bit:0
+146000.00ns DEBUG    Performance Model                  imm24:18
+155000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0010
+my_datapath.ALUOutM         = 0x00000068
+my_datapath.ALUOutW         = 0x00000068
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0010
+my_datapath.ExtImmD         = 0x00000008
+my_datapath.ExtImmE         = 0x00000008
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 010101
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x520008
+my_datapath.InstructionD    = 0xe1520008
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0x1a000012
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000030
+my_datapath.PCPlus4D        = 0x00000030
+my_datapath.PCPlus4F        = 0x00000034
+my_datapath.PCPlus8D        = 0x00000034
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000034
+my_datapath.PC_NEXT_NEXT    = 0x00000034
+my_datapath.RA1D            = 0010
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 1000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000026
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000068
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = 0x00000026
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000068
+my_datapath.Rm              = 1000
+my_datapath.Rn              = 0010
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 1000
+my_datapath.WA3W            = 0010
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+155000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0010
+my_controller.ALUControlE     = 0010
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 010101
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 1
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 0
+my_controller.RegWriteE       = 0
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+156000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+156000.00ns DEBUG    Performance Model                  PC:0x34          PC:0x34
+156000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+156000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+156000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+156000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+156000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+156000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+156000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+156000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+156000.00ns DEBUG    Performance Model                  Register:8: 0x0          0x0
+156000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+156000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+156000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+156000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+156000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+156000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+156000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x38
+156000.00ns DEBUG    Performance Model                  **************** Clock cycle: 15 **********************
+156000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+165000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0010
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000068
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 0001
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 1000
+my_datapath.ExtImmD         = 0x00000048
+my_datapath.ExtImmE         = 0x00000008
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 01
+my_datapath.Funct           = 100000
+my_datapath.ImmSrcD         = 10
+my_datapath.Inst            = 0x000012
+my_datapath.InstructionD    = 0x1a000012
+my_datapath.InstructionE    = 0xe1520008
+my_datapath.InstructionF    = 0x0a000000
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 1
+my_datapath.Op              = 10
+my_datapath.PCFetch         = 0x00000034
+my_datapath.PCPlus4D        = 0x00000034
+my_datapath.PCPlus4F        = 0x00000038
+my_datapath.PCPlus8D        = 0x00000038
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000038
+my_datapath.PC_NEXT_NEXT    = 0x00000038
+my_datapath.RA1D            = 1111
+my_datapath.RA1E            = 0010
+my_datapath.RA2D            = 0010
+my_datapath.RA2E            = 1000
+my_datapath.RD1             = 0x00000038
+my_datapath.RD1E            = 0x00000026
+my_datapath.RD2             = 0x00000026
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000026
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = 0x00000026
+my_datapath.RegSrcD         = 01
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000026
+my_datapath.Rm              = 0010
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000026
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000026
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000026
+my_datapath.SrcB            = 0x00000026
+my_datapath.SrcBE           = 0x00000026
+my_datapath.SrcBEData       = 0x00000026
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 1000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+165000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0100
+my_controller.ALUControlE     = 0010
+my_controller.ALUSrcD         = 1
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 1
+my_controller.BranchD         = 1
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 0001
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 100000
+my_controller.ImmSrcD         = 10
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 1
+my_controller.Op              = 10
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 01
+my_controller.RegWriteD       = 0
+my_controller.RegWriteE       = 0
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+166000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+166000.00ns DEBUG    Performance Model                  PC:0x38          PC:0x38
+166000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+166000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+166000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+166000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+166000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+166000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+166000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+166000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+166000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+166000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+166000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+166000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+166000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+166000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+166000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+166000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x3c
+166000.00ns DEBUG    Performance Model                  **************** Clock cycle: 16 **********************
+166000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+175000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0100
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000080
+my_datapath.ALUSrcE         = 1
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000048
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 100000
+my_datapath.ImmSrcD         = 10
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x0a000000
+my_datapath.InstructionE    = 0x1a000012
+my_datapath.InstructionF    = 0x00000000
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 10
+my_datapath.PCFetch         = 0x00000038
+my_datapath.PCPlus4D        = 0x00000038
+my_datapath.PCPlus4F        = 0x0000003c
+my_datapath.PCPlus8D        = 0x0000003c
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x0000003c
+my_datapath.PC_NEXT_NEXT    = 0x0000003c
+my_datapath.RA1D            = 1111
+my_datapath.RA1E            = 1111
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0010
+my_datapath.RD1             = 0x0000003c
+my_datapath.RD1E            = 0x00000038
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000026
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 01
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000012
+my_datapath.SHIFT_CONTROL   = 11
+my_datapath.SHIFT_DATA      = 0x00000012
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000038
+my_datapath.SrcB            = 0x00000026
+my_datapath.SrcBE           = 0x00000048
+my_datapath.SrcBEData       = 0x00000012
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+175000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0100
+my_controller.ALUControlE     = 0100
+my_controller.ALUSrcD         = 1
+my_controller.ALUSrcE         = 1
+my_controller.BControl        = 1
+my_controller.BranchD         = 1
+my_controller.BranchE         = 1
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 0000
+my_controller.CondE           = 0001
+my_controller.CondEx          = 0
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 100000
+my_controller.ImmSrcD         = 10
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 10
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 01
+my_controller.RegWriteD       = 0
+my_controller.RegWriteE       = 0
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+176000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+176000.00ns DEBUG    Performance Model                  PC:0x3c          PC:0x3c
+176000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+176000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+176000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+176000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+176000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+176000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+176000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+176000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+176000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+176000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+176000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+176000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+176000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+176000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+176000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+176000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x40
+176000.00ns DEBUG    Performance Model                  **************** Clock cycle: 17 **********************
+176000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+176000.00ns DEBUG    Performance Model                  Binary string:00001010000000000000000000000000
+176000.00ns DEBUG    Performance Model                  Operation type Branch (except Bx)
+176000.00ns DEBUG    Performance Model                  Link bit:0
+176000.00ns DEBUG    Performance Model                  imm24:0
+185000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0100
+my_datapath.ALUOutM         = 0x00000080
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x0000003c
+my_datapath.ALUSrcE         = 1
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 1
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 1
+my_datapath.FlushE          = 1
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0x0a000000
+my_datapath.InstructionF    = 0xeb000002
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x0000003c
+my_datapath.PCPlus4D        = 0x0000003c
+my_datapath.PCPlus4F        = 0x00000040
+my_datapath.PCPlus8D        = 0x00000040
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000040
+my_datapath.PC_NEXT_NEXT    = 0x0000003c
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 1111
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x0000003c
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 11
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x0000003c
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000026
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+185000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 0100
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 1
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 1
+my_controller.BranchTakenE    = 1
+my_controller.Cond            = 0000
+my_controller.CondE           = 0000
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 0
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+186000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+186000.00ns DEBUG    Performance Model                  PC:0x3c          PC:0x3c
+186000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+186000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+186000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+186000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+186000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+186000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+186000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+186000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+186000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+186000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+186000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+186000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+186000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+186000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+186000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+186000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x40
+186000.00ns DEBUG    Performance Model                  **************** Clock cycle: 18 **********************
+186000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+195000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x0000003c
+my_datapath.ALUOutW         = 0x00000080
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0xeb000002
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x0000003c
+my_datapath.PCPlus4D        = 0x00000000
+my_datapath.PCPlus4F        = 0x00000040
+my_datapath.PCPlus8D        = 0x00000040
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000040
+my_datapath.PC_NEXT_NEXT    = 0x00000040
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000080
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000080
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+195000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 0000
+my_controller.CondE           = 0000
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+196000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+196000.00ns DEBUG    Performance Model                  PC:0x40          PC:0x40
+196000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+196000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+196000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+196000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+196000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+196000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+196000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+196000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+196000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+196000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+196000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+196000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+196000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+196000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+196000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x0
+196000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x44
+196000.00ns DEBUG    Performance Model                  **************** Clock cycle: 19 **********************
+196000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+205000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x0000003c
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 1110
+my_datapath.ExtImmD         = 0x00000008
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 10
+my_datapath.ForwardBE       = 10
+my_datapath.Funct           = 110000
+my_datapath.ImmSrcD         = 10
+my_datapath.Inst            = 0x000002
+my_datapath.InstructionD    = 0xeb000002
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0xe3a00e33
+my_datapath.L               = 1
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 10
+my_datapath.PCFetch         = 0x00000040
+my_datapath.PCPlus4D        = 0x00000040
+my_datapath.PCPlus4F        = 0x00000044
+my_datapath.PCPlus8D        = 0x00000044
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000044
+my_datapath.PC_NEXT_NEXT    = 0x00000044
+my_datapath.RA1D            = 1111
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000044
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000040
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 11
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x0000003c
+my_datapath.Rm              = 0010
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+205000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0100
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 1
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 1
+my_controller.BranchD         = 1
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 0000
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 110000
+my_controller.ImmSrcD         = 10
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 10
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 11
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+206000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+206000.00ns DEBUG    Performance Model                  PC:0x44          PC:0x44
+206000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+206000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+206000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+206000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+206000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+206000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+206000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+206000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+206000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+206000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+206000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+206000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+206000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+206000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+206000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x40
+206000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x48
+206000.00ns DEBUG    Performance Model                  **************** Clock cycle: 20 **********************
+206000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+206000.00ns DEBUG    Performance Model                  Binary string:11101011000000000000000000000010
+206000.00ns DEBUG    Performance Model                  Operation type Branch (except Bx)
+206000.00ns DEBUG    Performance Model                  Link bit:1
+206000.00ns DEBUG    Performance Model                  imm24:2
+215000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0100
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x0000004c
+my_datapath.ALUSrcE         = 1
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 1
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000033
+my_datapath.ExtImmE         = 0x00000008
+my_datapath.FlushD          = 1
+my_datapath.FlushE          = 1
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 10
+my_datapath.Funct           = 111010
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0xa00e33
+my_datapath.InstructionD    = 0xe3a00e33
+my_datapath.InstructionE    = 0xeb000002
+my_datapath.InstructionF    = 0x00000000
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000044
+my_datapath.PCPlus4D        = 0x00000044
+my_datapath.PCPlus4F        = 0x00000048
+my_datapath.PCPlus8D        = 0x00000048
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000048
+my_datapath.PC_NEXT_NEXT    = 0x0000004c
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 1111
+my_datapath.RA2D            = 0011
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000044
+my_datapath.RD2             = 0x00000002
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0011
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000002
+my_datapath.SHIFT_CONTROL   = 11
+my_datapath.SHIFT_DATA      = 0x00000002
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000044
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000008
+my_datapath.SrcBEData       = 0x00000002
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+215000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 1101
+my_controller.ALUControlE     = 0100
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 1
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 1
+my_controller.BranchTakenE    = 1
+my_controller.Cond            = 1110
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 111010
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 0
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+216000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+216000.00ns DEBUG    Performance Model                  PC:0x4c          PC:0x4c
+216000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+216000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+216000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+216000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+216000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+216000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+216000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+216000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+216000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+216000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+216000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+216000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+216000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+216000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+216000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x40
+216000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x50
+216000.00ns DEBUG    Performance Model                  **************** Clock cycle: 21 **********************
+216000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+225000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 1101
+my_datapath.ALUOutM         = 0x0000004c
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000033
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 01
+my_datapath.ForwardBE       = 01
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0xe12fff1e
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x0000004c
+my_datapath.PCPlus4D        = 0x00000000
+my_datapath.PCPlus4F        = 0x00000050
+my_datapath.PCPlus8D        = 0x00000050
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000050
+my_datapath.PC_NEXT_NEXT    = 0x00000050
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+225000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 1101
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 0000
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+226000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+226000.00ns DEBUG    Performance Model                  PC:0x50          PC:0x50
+226000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+226000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+226000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+226000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+226000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+226000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+226000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+226000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+226000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+226000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+226000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+226000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+226000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+226000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+226000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x40
+226000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x54
+226000.00ns DEBUG    Performance Model                  **************** Clock cycle: 22 **********************
+226000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+235000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x0000004c
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x0000001e
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 10
+my_datapath.ForwardBE       = 10
+my_datapath.Funct           = 010010
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x2fff1e
+my_datapath.InstructionD    = 0xe12fff1e
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0x00000000
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000050
+my_datapath.PCPlus4D        = 0x00000050
+my_datapath.PCPlus4F        = 0x00000054
+my_datapath.PCPlus8D        = 0x00000054
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000054
+my_datapath.PC_NEXT_NEXT    = 0x00000054
+my_datapath.RA1D            = 1111
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 1110
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000054
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000040
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x0000004c
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 1111
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x0000004c
+my_datapath.Rm              = 1110
+my_datapath.Rn              = 1111
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+235000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 1101
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 1
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 0000
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 010010
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 0
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+236000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+236000.00ns DEBUG    Performance Model                  PC:0x54          PC:0x54
+236000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+236000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+236000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+236000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+236000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+236000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+236000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+236000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+236000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+236000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+236000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+236000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+236000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+236000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+236000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x40
+236000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x58
+236000.00ns DEBUG    Performance Model                  **************** Clock cycle: 23 **********************
+236000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+236000.00ns DEBUG    Performance Model                  Binary string:11100001001011111111111100011110
+236000.00ns DEBUG    Performance Model                  Operation type BX
+236000.00ns DEBUG    Performance Model                  Rm: 14
+245000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 1101
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000040
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 1
+my_datapath.BranchTakenE    = 1
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x0000001e
+my_datapath.FlushD          = 1
+my_datapath.FlushE          = 1
+my_datapath.ForwardAE       = 00
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0xe12fff1e
+my_datapath.InstructionF    = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000054
+my_datapath.PCPlus4D        = 0x00000054
+my_datapath.PCPlus4F        = 0x00000058
+my_datapath.PCPlus8D        = 0x00000058
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000058
+my_datapath.PC_NEXT_NEXT    = 0x00000040
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 1111
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 1110
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000054
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000040
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 11111110
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000040
+my_datapath.SHIFT_SHAMT     = 11110
+my_datapath.SrcAE           = 0x00000054
+my_datapath.SrcB            = 0x00000040
+my_datapath.SrcBE           = 0x00000040
+my_datapath.SrcBEData       = 0x00000040
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 1111
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+245000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 1101
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 1
+my_controller.BranchTakenE    = 1
+my_controller.Cond            = 0000
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 0
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+246000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+246000.00ns DEBUG    Performance Model                  PC:0x40          PC:0x40
+246000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+246000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+246000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+246000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+246000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+246000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+246000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+246000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+246000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+246000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+246000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+246000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+246000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+246000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+246000.00ns DEBUG    Performance Model                  Register:14: 0x0         0x40
+246000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x44
+246000.00ns DEBUG    Performance Model                  **************** Clock cycle: 24 **********************
+246000.00ns DEBUG    Performance Model                  ****** Current Instruction *********
+246000.00ns DEBUG    Performance Model                  Binary string:11100011101000000000111000110011
+246000.00ns DEBUG    Performance Model                  Operation type Data Processing
+246000.00ns DEBUG    Performance Model                  cond:E
+246000.00ns DEBUG    Performance Model                  Immediate bit:1
+246000.00ns DEBUG    Performance Model                  cmd:D
+246000.00ns DEBUG    Performance Model                  Set bit:0
+246000.00ns DEBUG    Performance Model                  Rn:0     Rd:0
+246000.00ns DEBUG    Performance Model                  rot:14   imm8:51
+255000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000040
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 01
+my_datapath.ForwardBE       = 01
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0xe3a00e33
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000040
+my_datapath.PCPlus4D        = 0x00000000
+my_datapath.PCPlus4F        = 0x00000044
+my_datapath.PCPlus8D        = 0x00000044
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000044
+my_datapath.PC_NEXT_NEXT    = 0x00000044
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 1111
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000040
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+255000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 0000
+my_controller.CondE           = 0000
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 0
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+256000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+256000.00ns DEBUG    Performance Model                  PC:0x44          PC:0x44
+256000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+256000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+256000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+256000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+256000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+256000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+256000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+256000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+256000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+256000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+256000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+256000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+256000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+256000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+256000.00ns DEBUG    Performance Model                  Register:14: 0x40        0x40
+256000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x48
+256000.00ns DEBUG    Performance Model                  **************** Clock cycle: 25 **********************
+256000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+265000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000040
+my_datapath.ALUResultE      = 0x00000000
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 1111
+my_datapath.ExtImmD         = 0x00000033
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 10
+my_datapath.ForwardBE       = 10
+my_datapath.Funct           = 111010
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0xa00e33
+my_datapath.InstructionD    = 0xe3a00e33
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0x00000000
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000044
+my_datapath.PCPlus4D        = 0x00000044
+my_datapath.PCPlus4F        = 0x00000048
+my_datapath.PCPlus8D        = 0x00000048
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000048
+my_datapath.PC_NEXT_NEXT    = 0x00000048
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0011
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000002
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000040
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 0
+my_datapath.ResultW         = 0x00000040
+my_datapath.Rm              = 0011
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000000
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000000
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000000
+my_datapath.SrcBE           = 0x00000000
+my_datapath.SrcBEData       = 0x00000000
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 1111
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 1
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+265000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 1101
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 0000
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 111010
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 0
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+266000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+266000.00ns DEBUG    Performance Model                  PC:0x-1          PC:0x48
+266000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+266000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+266000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+266000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+266000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+266000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+266000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+266000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+266000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+266000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+266000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+266000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+266000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+266000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+266000.00ns DEBUG    Performance Model                  Register:14: 0x40        0x40
+266000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x4c
+266000.00ns DEBUG    Performance Model                  **************** Clock cycle: 26 **********************
+266000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+275000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 1101
+my_datapath.ALUOutM         = 0x00000000
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000330
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000033
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 10
+my_datapath.ForwardBE       = 00
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0xe3a00e33
+my_datapath.InstructionF    = 0x00000000
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000048
+my_datapath.PCPlus4D        = 0x00000048
+my_datapath.PCPlus4F        = 0x0000004c
+my_datapath.PCPlus8D        = 0x0000004c
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x0000004c
+my_datapath.PC_NEXT_NEXT    = 0x0000004c
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0011
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000002
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 11011100
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000330
+my_datapath.SHIFT_CONTROL   = 11
+my_datapath.SHIFT_DATA      = 0x00000033
+my_datapath.SHIFT_SHAMT     = 11100
+my_datapath.SrcAE           = 0x00000000
+my_datapath.SrcB            = 0x00000002
+my_datapath.SrcBE           = 0x00000330
+my_datapath.SrcBEData       = 0x00000330
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 0
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+275000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 1101
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 0000
+my_controller.CondE           = 1110
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 00
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 0
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+276000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+276000.00ns DEBUG    Performance Model                  PC:0x-1          PC:0x4c
+276000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+276000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+276000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+276000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+276000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+276000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+276000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+276000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+276000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+276000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+276000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+276000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+276000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+276000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+276000.00ns DEBUG    Performance Model                  Register:14: 0x40        0x40
+276000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x50
+276000.00ns DEBUG    Performance Model                  **************** Clock cycle: 27 **********************
+276000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+285000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000330
+my_datapath.ALUOutW         = 0x00000000
+my_datapath.ALUResultE      = 0x00000330
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 0000
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x00000000
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 10
+my_datapath.ForwardBE       = 10
+my_datapath.Funct           = 000000
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x000000
+my_datapath.InstructionD    = 0x00000000
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0xe12fff1e
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x0000004c
+my_datapath.PCPlus4D        = 0x0000004c
+my_datapath.PCPlus4F        = 0x00000050
+my_datapath.PCPlus8D        = 0x00000050
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000050
+my_datapath.PC_NEXT_NEXT    = 0x00000050
+my_datapath.RA1D            = 0000
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 0000
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000000
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000000
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000000
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 0000
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000000
+my_datapath.Rm              = 0000
+my_datapath.Rn              = 0000
+my_datapath.SHIFTED_DATA    = 0x00000330
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000330
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000330
+my_datapath.SrcB            = 0x00000330
+my_datapath.SrcBE           = 0x00000330
+my_datapath.SrcBEData       = 0x00000330
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000002
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 1
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+285000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 0000
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 0
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 0000
+my_controller.CondE           = 0000
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 01
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 000000
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 1
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 1
+my_controller.clk             = 1
+my_controller.reset           = 0
+286000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+286000.00ns DEBUG    Performance Model                  PC:0x-1          PC:0x50
+286000.00ns DEBUG    Performance Model                  Register:0: 0x0          0x0
+286000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+286000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+286000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+286000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+286000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+286000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+286000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+286000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+286000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+286000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+286000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+286000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+286000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+286000.00ns DEBUG    Performance Model                  Register:14: 0x40        0x40
+286000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x54
+286000.00ns DEBUG    Performance Model                  **************** Clock cycle: 28 **********************
+286000.00ns DEBUG    Performance Model                  Computer is stalled for this cycle
+295000.00ns DEBUG    Performance Model                  ************ DUT DATAPATH Signals ***************
+my_datapath.ALUControlE     = 0000
+my_datapath.ALUOutM         = 0x00000330
+my_datapath.ALUOutW         = 0x00000330
+my_datapath.ALUResultE      = 0x00000330
+my_datapath.ALUSrcE         = 0
+my_datapath.BX              = 0
+my_datapath.BranchTakenE    = 0
+my_datapath.Cond            = 1110
+my_datapath.Debug_Source_select= zzzz
+my_datapath.Debug_out       = 0x00000000
+my_datapath.DestSelect      = 0000
+my_datapath.ExtImmD         = 0x0000001e
+my_datapath.ExtImmE         = 0x00000000
+my_datapath.FlushD          = 0
+my_datapath.FlushE          = 0
+my_datapath.ForwardAE       = 10
+my_datapath.ForwardBE       = 10
+my_datapath.Funct           = 010010
+my_datapath.ImmSrcD         = 00
+my_datapath.Inst            = 0x2fff1e
+my_datapath.InstructionD    = 0xe12fff1e
+my_datapath.InstructionE    = 0x00000000
+my_datapath.InstructionF    = 0x00000000
+my_datapath.L               = 0
+my_datapath.MemWriteM       = 0
+my_datapath.MemtoRegW       = 0
+my_datapath.Op              = 00
+my_datapath.PCFetch         = 0x00000050
+my_datapath.PCPlus4D        = 0x00000050
+my_datapath.PCPlus4F        = 0x00000054
+my_datapath.PCPlus8D        = 0x00000054
+my_datapath.PCSrcW          = 0
+my_datapath.PC_NEXT         = 0x00000054
+my_datapath.PC_NEXT_NEXT    = 0x00000054
+my_datapath.RA1D            = 1111
+my_datapath.RA1E            = 0000
+my_datapath.RA2D            = 1110
+my_datapath.RA2E            = 0000
+my_datapath.RD1             = 0x00000054
+my_datapath.RD1E            = 0x00000000
+my_datapath.RD2             = 0x00000040
+my_datapath.RD2E            = 0x00000000
+my_datapath.REG_FILE_DATA   = 0x00000330
+my_datapath.ROT_VALUE       = 00000000
+my_datapath.Rd              = 1111
+my_datapath.ReadDataM       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.ReadDataW       = xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+my_datapath.RegSrcD         = 00
+my_datapath.RegWriteW       = 1
+my_datapath.ResultW         = 0x00000330
+my_datapath.Rm              = 1110
+my_datapath.Rn              = 1111
+my_datapath.SHIFTED_DATA    = 0x00000330
+my_datapath.SHIFT_CONTROL   = 00
+my_datapath.SHIFT_DATA      = 0x00000330
+my_datapath.SHIFT_SHAMT     = 00000
+my_datapath.SrcAE           = 0x00000330
+my_datapath.SrcB            = 0x00000330
+my_datapath.SrcBE           = 0x00000330
+my_datapath.SrcBEData       = 0x00000330
+my_datapath.StallD          = 0
+my_datapath.StallF          = 0
+my_datapath.WA3E            = 0000
+my_datapath.WA3M            = 0000
+my_datapath.WA3W            = 0000
+my_datapath.WriteDataM      = 0x00000000
+my_datapath.Write_Z_ENABLE  = 1
+my_datapath.Z_FLAG          = 0
+my_datapath.Z_OUT           = 0
+my_datapath.clk             = 1
+my_datapath.reset           = 0
+295000.00ns DEBUG    Performance Model                  ************ DUT Controller Signals ***************
+my_controller.ALUControlD     = 1101
+my_controller.ALUControlE     = 0000
+my_controller.ALUSrcD         = 0
+my_controller.ALUSrcE         = 0
+my_controller.BControl        = 0
+my_controller.BranchD         = 1
+my_controller.BranchE         = 0
+my_controller.BranchTakenE    = 0
+my_controller.Cond            = 1110
+my_controller.CondE           = 0000
+my_controller.CondEx          = 1
+my_controller.FlagWriteD      = 00
+my_controller.FlagWriteE      = 01
+my_controller.FuncControl     = 0
+my_controller.Funct           = 010010
+my_controller.ImmSrcD         = 00
+my_controller.MemWriteD       = 0
+my_controller.MemWriteE       = 0
+my_controller.MemWriteM       = 0
+my_controller.MemtoRegD       = 0
+my_controller.MemtoRegE       = 0
+my_controller.MemtoRegM       = 0
+my_controller.MemtoRegW       = 0
+my_controller.Op              = 00
+my_controller.PCSrcD          = 0
+my_controller.PCSrcE          = 0
+my_controller.PCSrcM          = 0
+my_controller.PCSrcW          = 0
+my_controller.RegSrcD         = 00
+my_controller.RegWriteD       = 0
+my_controller.RegWriteE       = 1
+my_controller.RegWriteM       = 1
+my_controller.RegWriteW       = 1
+my_controller.Write_Z_ENABLE  = 1
+my_controller.Z_FLAG          = 0
+my_controller.clk             = 1
+my_controller.reset           = 0
+296000.00ns DEBUG    Performance Model                  ************* Performance Model / DUT Data  **************
+296000.00ns DEBUG    Performance Model                  PC:0x-1          PC:0x54
+296000.00ns DEBUG    Performance Model                  Register:0: 0x330        0x330
+296000.00ns DEBUG    Performance Model                  Register:1: 0x13         0x13
+296000.00ns DEBUG    Performance Model                  Register:2: 0x26         0x26
+296000.00ns DEBUG    Performance Model                  Register:3: 0x2          0x2
+296000.00ns DEBUG    Performance Model                  Register:4: 0x4c         0x4c
+296000.00ns DEBUG    Performance Model                  Register:5: 0xa          0xa
+296000.00ns DEBUG    Performance Model                  Register:6: 0x80000002   0x80000002
+296000.00ns DEBUG    Performance Model                  Register:7: 0xfffffff8   0xfffffff8
+296000.00ns DEBUG    Performance Model                  Register:8: 0x26         0x26
+296000.00ns DEBUG    Performance Model                  Register:9: 0x0          0x0
+296000.00ns DEBUG    Performance Model                  Register:10: 0x0         0x0
+296000.00ns DEBUG    Performance Model                  Register:11: 0x0         0x0
+296000.00ns DEBUG    Performance Model                  Register:12: 0x0         0x0
+296000.00ns DEBUG    Performance Model                  Register:13: 0x0         0x0
+296000.00ns DEBUG    Performance Model                  Register:14: 0x40        0x40
+296000.00ns DEBUG    Performance Model                  Register:15: Not checked         0x58
+297000.00ns INFO     cocotb.regression                  Pipeline_test ←[32mpassed←[49m←[39m
+297000.00ns INFO     cocotb.regression                  **************************************************************************************
+                                                        ** TEST                          STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        **************************************************************************************
+                                                        ** Pipeline_Test.Pipeline_test   ←[32m PASS ←[49m←[39m     297000.00           0.34     867714.50  **
+                                                        **************************************************************************************
+                                                        ** TESTS=1 PASS=1 FAIL=0 SKIP=0             297000.00           0.50     597465.16  **
+                                                        **************************************************************************************
+
+make[1]: Leaving directory '/c/Users/alper/Desktop/EE/EE5-2/EE446/Prelim/Exp4/Pipeline_ARM/Test'
+(base) PS C:\Users\alper\Desktop\EE\EE5-2\EE446\Prelim\Exp4\Pipeline_ARM\Test>
