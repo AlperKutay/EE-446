@@ -17,6 +17,7 @@ wire MemtoRegW;
 
 wire [3:0] RA1D,RA2D,RA1E,RA2E,WA3E,WA3M,WA3W;
 wire [3:0] Cond;
+wire [3:0] Rd;
 wire [1:0] Op;
 wire [5:0] Funct;
 
@@ -45,6 +46,7 @@ Controller_unit my_controller(
 	.Funct(Funct),
 	.Cond(Cond),
 	.Z_FLAG(Z_FLAG),
+	.Rd(Rd),
 	
 	.RegSrcD(RegSrcD),
 	.ImmSrcD(ImmSrcD),
@@ -75,7 +77,7 @@ datapath #(32) my_datapath
   .Debug_Source_select(debug_reg_select),.BranchTakenE(BranchTakenE),
   .Write_Z_ENABLE(Write_Z_ENABLE),.StallF(StallF),.StallD(StallD),.FlushD(FlushD),.FlushE(FlushE),.ForwardAE(ForwardAE),.ForwardBE(ForwardBE),
   
-  .Cond(Cond),
+  .Cond(Cond),.Rd(Rd),
   .Op(Op),
   .Funct(Funct),
   .PCFetch(PCFetch),

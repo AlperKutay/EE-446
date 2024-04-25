@@ -1,5 +1,5 @@
 Assembler report for Exp4
-Sun Apr 14 23:46:19 2024
+Thu Apr 25 03:51:55 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sun Apr 14 23:46:19 2024 ;
+; Assembler Status      ; Successful - Thu Apr 25 03:51:55 2024 ;
 ; Revision Name         ; Exp4                                  ;
 ; Top-level Entity Name ; Project_top_module                    ;
 ; Family                ; Cyclone V                             ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+---------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                               ;
 +----------------+---------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x01B41197                                                                            ;
-; Checksum       ; 0x01B41197                                                                            ;
+; JTAG usercode  ; 0x01B70201                                                                            ;
+; Checksum       ; 0x01B70201                                                                            ;
 +----------------+---------------------------------------------------------------------------------------+
 
 
@@ -78,14 +78,14 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sun Apr 14 23:46:07 2024
+    Info: Processing started: Thu Apr 25 03:51:46 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Exp4 -c Exp4
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4923 megabytes
-    Info: Processing ended: Sun Apr 14 23:46:19 2024
-    Info: Elapsed time: 00:00:12
+    Info: Peak virtual memory: 4947 megabytes
+    Info: Processing ended: Thu Apr 25 03:51:55 2024
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:09
 
 

@@ -15,7 +15,7 @@ module datapath #(parameter WIDTH=32)
   output [WIDTH-1:0] PCFetch,
   output Z_FLAG,
   output [WIDTH-1:0] Debug_out,
-  
+  output [3:0] Rd,
   	//For Hazard unit
   output [3:0] RA1D,RA2D,RA1E,RA2E,WA3E,WA3M,WA3W
 );
@@ -33,7 +33,7 @@ wire I;
 wire L;
 wire BX;
 
-wire [3:0] Rn,Rm,Rd,DestSelect;
+wire [3:0] Rn,Rm,DestSelect;
 wire [23:0] Inst;
 
 assign ROT_VALUE = {InstructionE[11:8],InstructionE[11:8]}<< 1;

@@ -4,6 +4,7 @@ module Controller_unit(
 	input [5:0] Funct,
 	input [3:0] Cond,
 	input Z_FLAG,
+	input [3:0] Rd,
 	
 	output [1:0] RegSrcD,
 	output [1:0] ImmSrcD,
@@ -57,6 +58,7 @@ Controller my_controller(
 	.Op(Op),
 	.Funct(Funct),	
 	.Z_FLAG(Z_FLAG),
+	.Rd(Rd),
 	
 	.PCSrcD(PCSrcD),
 	.BranchD(BranchD),

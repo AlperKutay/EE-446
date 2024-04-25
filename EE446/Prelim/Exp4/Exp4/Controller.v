@@ -2,7 +2,8 @@ module Controller(
 	input clk,
 	input [1:0] Op,
 	input [5:0] Funct,	
-	input Z_FLAG,
+	input Z_FLAG, 
+	input [3:0] Rd,
 	
 	output reg PCSrcD,
 	output reg BranchD,
@@ -18,7 +19,6 @@ module Controller(
 ); 
 
 always @(*) begin
-	PCSrcD = 0;
 	BranchD = 0;
 	RegWriteD = 0;
 	MemWriteD = 0;
@@ -41,50 +41,42 @@ always @(*) begin
 			case(Funct[4:1])				
 				4'b0100: begin//ADD 
 					ALUControlD = 4'b0100;
-					PCSrcD = 0;
 					RegWriteD = 1;
 					FlagWriteD = 1;
 				end			
 				4'b0010: begin//SUB 
 					ALUControlD = 4'b0010;
-					PCSrcD = 0;
 					RegWriteD = 1;
 					FlagWriteD = 1;
 				end				
 				4'b0000: begin// AND 
 					ALUControlD = 4'b0000;
-					PCSrcD = 0;
 					RegWriteD = 1;
 					FlagWriteD = 1;
 				end			
 				4'b1100: begin// ORR 
 					ALUControlD = 4'b1100;
-					PCSrcD = 0;
 					RegWriteD = 1;
 					FlagWriteD = 1;
 				end	 
 				4'b1101: begin// MOV
 					ALUControlD = 4'b1101;
-					PCSrcD = 0;
 					RegWriteD = 1;
 					FlagWriteD = 0;
 				end		
 				4'b1010: begin// CMP 
 					ALUControlD = 4'b0010;
-					PCSrcD = 0;
 					RegWriteD = 0;
 					FlagWriteD = 1;
 					end
 				4'b1001: begin// BX 
 					ALUControlD = 4'b1101;//MOV
-					PCSrcD = 0;
 					BranchD = 1;
 					RegWriteD = 0;
 					FlagWriteD = 0;
 				end
 				default: begin
 					ALUControlD = 4'b0000;//Does not matter
-					PCSrcD = 0;
 					RegWriteD = 0;
 					FlagWriteD = 0;
 				end
@@ -92,7 +84,6 @@ always @(*) begin
 		end	
 		// Memory
 		2'b01:begin
-			PCSrcD = 0;
 			case(Funct[0])
 				// LDR
 				1'b1: begin
@@ -128,7 +119,6 @@ always @(*) begin
 		end	
 		// Branch
 		2'b10:begin
-			PCSrcD = 0; //Not Inc PC so that it should be 1
 			MemtoRegD = 0;
 			MemWriteD = 0;
 			ImmSrcD = 2'b10;
@@ -163,5 +153,6 @@ always @(*) begin
 			
 		end
 	endcase
+	PCSrcD = (Rd == 15) & (Funct != 4'b1001) & RegWriteD;
 end
 endmodule
